@@ -31,6 +31,7 @@ Style Index
     * stores Page
     * Commission Page
     * Time Page
+    * prohibited Page
     * Footer Section
     * Media Query
 */
@@ -1402,6 +1403,83 @@ form.Forgot-password i {
 }
 
 /*--------------------------------------------------
+  [* Start prohibited Page ]
+--------------------------------------------------*/
+
+#prohibited {
+  position: relative;
+  padding: 100px;
+}
+
+#prohibited .panel-default>.panel-heading {
+  color: #fff;
+  background-color: #303d46;
+  border-color: #303d46;
+}
+
+#prohibited .panel-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  color: #ffffff !important;
+  padding: 8px !important;
+}
+
+#prohibited .panel-default>.panel-heading+.panel-collapse>.panel-body {
+  background: rgba(48, 61, 70, 0.03);
+  padding: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #77838c;
+}
+
+#prohibited .panel-group .panel {
+  margin-bottom: 10px;
+}
+
+#prohibited .po-item {
+  background: #f3f3f3;
+  padding: 14px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+#prohibited .po-item:hover {
+  background: #f1f1f1;
+  padding: 14px;
+  border-radius: 4px;
+  border: 1px solid #e4e8ea;
+}
+
+#prohibited .po-item h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #303d46;
+  margin-bottom: 22px;
+}
+
+#prohibited .po-item p {
+  font-size: 12px;
+  background: #e6e5e5;
+  padding: 8px;
+  margin-bottom: 7px;
+  border-radius: 4px;
+  padding-right: 32px;
+}
+
+#prohibited .po-item p>i {
+  background: #d8463c;
+  color: #fff;
+  padding: 9px;
+  position: absolute;
+  margin-right: -38px;
+  font-size: 14px;
+  margin-top: -7px;
+}
+
+/*--------------------------------------------------
   [* Start footer section ]
 --------------------------------------------------*/
 
@@ -1502,7 +1580,8 @@ footer.page-footer .footer-copyright {
   #our-customers,
   #time,
   #footer,
-  #asked-questions {
+  #asked-questions,
+  #prohibited {
     padding: 50px 0;
   }
 
@@ -1558,7 +1637,8 @@ footer.page-footer .footer-copyright {
   #Customer,
   #time,
   #footer,
-  #asked-questions {
+  #asked-questions,
+  #prohibited {
     padding: 50px 0;
   }
 
@@ -1581,3 +1661,12 @@ footer.page-footer .footer-copyright {
     padding: 50px 15px;
   }
 }
+
+
+
+
+
+
+
+
+
