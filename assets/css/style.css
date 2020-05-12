@@ -920,6 +920,7 @@ li.breadcrumb-item {
 #ordering {
   position: relative;
   padding: 100px 0;
+  background: #fff2da;
 }
 
 /* ===== Start Shipping ===== */
@@ -985,6 +986,12 @@ li.breadcrumb-item {
 
 #statistics .progressbar {
   position: relative;
+}
+
+#statistics .progressbar-box {
+  background-image: url('../img/statistics.png');
+  background-size: cover;
+  padding: 100px 0;
 }
 
 /* ===== Start our-customers ===== */
@@ -1155,6 +1162,10 @@ form.Forgot-password i {
 #Search {
   position: relative;
   padding: 100px 0;
+}
+
+#Search .card.card-cascade.wider .card-body.card-body-cascade {
+  background: #fff2da;
 }
 
 ::selection {
@@ -1562,11 +1573,11 @@ footer.page-footer .footer-copyright {
     -o-border-radius: inherit !important;
   }
 
-  #time .media
-  {
+  #time .media {
     padding-bottom: 25px;
   }
+
   .carousel_caption {
     padding: 50px 15px;
-}
+  }
 }

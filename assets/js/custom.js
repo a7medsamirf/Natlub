@@ -71,10 +71,10 @@ $('.scrollToTop').click(function () {
     Lightbox Init
 ===================================== */
 
-$(function () {
-  $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
-  });
-  
+$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+
 /* ==================================
     search
 ===================================== */
