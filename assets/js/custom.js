@@ -31,7 +31,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $("body").niceScroll({
-    scrollspeed: "120",
+    scrollspeed: "100",
     cursorcolor: "#a085a1",
     cursorborder: "3px solid #a085a1",
     cursorborderradius: 0,
