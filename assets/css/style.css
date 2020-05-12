@@ -603,7 +603,7 @@ li.breadcrumb-item {
   list-style: none;
 }
 
-#header  .carousel .carousel-indicators li {
+#header .carousel .carousel-indicators li {
   width: 100px !important;
   height: 5px !important;
   cursor: pointer;
@@ -755,11 +755,11 @@ li.breadcrumb-item {
 
 @supports (transform-style:preserve-3d) {
 
-.carousel-fade .carousel-item-left.active,
-.carousel-fade .carousel-item-next,
-.carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item-prev.active,
-.carousel-fade .carousel-item.active {
+  .carousel-fade .carousel-item-left.active,
+  .carousel-fade .carousel-item-next,
+  .carousel-fade .carousel-item-prev,
+  .carousel-fade .carousel-item-prev.active,
+  .carousel-fade .carousel-item.active {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
   }
@@ -930,8 +930,8 @@ li.breadcrumb-item {
   position: relative;
   padding: 100px 0;
 }
-#Distinguishes img
-{
+
+#Distinguishes img {
   width: 70px;
 }
 
@@ -942,14 +942,14 @@ li.breadcrumb-item {
   padding: 100px 0;
 }
 
-#statistics img
-{
+#statistics img {
   width: 70px;
 }
 
 #statistics .progress-value {
   color: #fff;
 }
+
 #statistics .progress-value {
   position: absolute;
   top: 0;
@@ -970,8 +970,7 @@ li.breadcrumb-item {
 
 /* ===== Start our-customers ===== */
 
-#our-customers
-{
+#our-customers {
   position: relative;
   padding: 100px 0;
 }
@@ -1349,10 +1348,29 @@ form.Forgot-password i {
   background-color: var(--Purplebackground) !important;
 
 }
+
 .carousel-multi-item .controls-top {
   margin-bottom: 1.88rem;
   text-align: right;
 }
+
+/*--------------------------------------------------
+  [* Start Commission Page ]
+--------------------------------------------------*/
+
+#time {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+#time .media-body {
+  background-color: var(--Purplebackground) !important;
+  color: var(--orangecolor) !important;
+  padding: 15px 25px;
+  border-radius: 5px;
+
+}
+
 /*--------------------------------------------------
   [* Start footer section ]
 --------------------------------------------------*/
@@ -1422,25 +1440,32 @@ footer.page-footer .footer-copyright {
 /*--------------------------------------------------
   [* Media Query ]
 --------------------------------------------------*/
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
   #header .carousel-item .mask img {
     max-width: 40%;
   }
-  
+
   .mask {
     position: absolute;
     top: 50px;
   }
+
   #header .carousel .carousel-indicators li {
     width: 75px !important;
-}
-#video,
-#ordering,
-#Shipping,
-#Distinguishes,
-#statistics
-{
-  padding: 50px 0;
-}
+  }
 
- }
+  #video,
+  #ordering,
+  #Shipping,
+  #Distinguishes,
+  #statistics,
+  #our-customers,
+  #time,
+  #footer {
+    padding: 50px 0;
+  }
+
+  #time .media {
+    margin-bottom: 2rem !important;
+  }
+}
