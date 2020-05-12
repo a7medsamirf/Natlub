@@ -1520,9 +1520,8 @@ footer.page-footer .footer-copyright {
   }
 }
 
-/*as col-sm*/
-/*large mobile device*/
-@media only screen and (min-width: 480px) and (max-width: 575px) {
+/*medium mobile device*/
+@media (max-width: 767.98px) {
   #inner-contact {
     height: 350px;
   }
@@ -1545,24 +1544,26 @@ footer.page-footer .footer-copyright {
   #Distinguishes,
   #statistics,
   #our-customers,
+  #Customer,
   #time,
   #footer,
   #asked-questions {
     padding: 50px 0;
   }
-}
 
-/*medium mobile device*/
-@media (max-width: 767.98px) {
-  #video,
-  #ordering,
-  #Shipping,
-  #Distinguishes,
-  #statistics,
-  #our-customers,
-  #time,
-  #footer,
-  #asked-questions {
-    padding: 50px 0;
+  #header .carousel .carousel-indicators li {
+    width: 70px !important;
+    height: 5px !important;
+    cursor: pointer;
+    border-radius: inherit !important;
+    -webkit-border-radius: inherit !important;
+    -moz-border-radius: inherit !important;
+    -ms-border-radius: inherit !important;
+    -o-border-radius: inherit !important;
+  }
+
+  #time .media
+  {
+    padding-bottom: 25px;
   }
 }
