@@ -53,7 +53,7 @@ Style Index
 :root {
   --Purplecolor: #a085a1;
   --orangecolor: #e2a841;
-  --Purplebackground: #a085a1;
+  --Purplebackground: #756479;
   --orangebackground: #e2a841;
   --mainshadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
 
@@ -84,7 +84,7 @@ Style Index
 }
 
 body {
-  overflow-x: hidden; 
+  overflow-x: hidden;
   margin: 0;
   font-family: 'natlub-font';
   font-size: .875rem;
@@ -414,8 +414,8 @@ input[type=number] {
   -webkit-transition: .2s ease;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  box-shadow: 0px 8px 16px 0px #a085a1;
-  background-color: var(--Purplebackground) !important;
+  box-shadow: 0px 8px 16px 0px #e2a841;
+  background-color: var(--orangebackground) !important;
 
 }
 
@@ -930,12 +930,12 @@ li.breadcrumb-item {
 }
 
 .rgba-stylish-strong {
-  background-color: rgba(160, 133, 161, 0.75);
+  background-color: rgba(39, 39, 39, 0.82);
 }
 
 .rgba-teal-strong,
 .rgba-teal-strong:after {
-  background-color: rgba(226, 168, 65, 0.75);
+  background-color: rgba(39, 39, 39, 0.82);
 }
 
 #Shipping .card-body {
@@ -1395,7 +1395,7 @@ form.Forgot-password i {
 --------------------------------------------------*/
 
 #footer {
-  padding-top: 100px;
+  padding-top: 15px;
   position: relative;
   font-weight: normal;
   font-size: 16px;
@@ -1403,10 +1403,16 @@ form.Forgot-password i {
   color: #a085a1;
   background-image: url(../img/footer-bg.png);
   background-size: cover;
+  background-color: var(--Purplebackground) !important;
 }
 
+#footer .title {
+  color: var(--orangecolor) !important;
+}
+
+#footer p,
 footer.page-footer a {
-  color: #8182a8;
+  color: #fff;
 }
 
 #footer i.fab {
@@ -1453,13 +1459,17 @@ footer.page-footer a {
 
 footer.page-footer .footer-copyright {
   background: transparent;
-  color: #8182a8;
+  color: #fff;
 }
 
 /*--------------------------------------------------
   [* Media Query ]
 --------------------------------------------------*/
-@media (max-width: 767.98px) {
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   #header .carousel-item .mask img {
     max-width: 40%;
   }
@@ -1480,7 +1490,8 @@ footer.page-footer .footer-copyright {
   #statistics,
   #our-customers,
   #time,
-  #footer {
+  #footer,
+  #asked-questions {
     padding: 50px 0;
   }
 
@@ -1490,5 +1501,53 @@ footer.page-footer .footer-copyright {
 
   .search-wrapper.active .input-holder {
     width: 300px;
+  }
+
+  #Search .form-check {
+    margin-top: 3rem !important;
+  }
+
+  #inner-contact {
+    height: 350px;
+  }
+
+  #inner-contact h2 {
+    font-size: 22px;
+  }
+
+  #inner-contact h4 {
+    font-size: 17px;
+  }
+}
+
+/*as col-sm*/
+/*large mobile device*/
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+  #inner-contact {
+    height: 350px;
+  }
+
+  #inner-contact {
+    height: 350px;
+  }
+
+  #inner-contact h2 {
+    font-size: 20px;
+  }
+
+  #inner-contact h4 {
+    font-size: 15px;
+  }
+
+  #video,
+  #ordering,
+  #Shipping,
+  #Distinguishes,
+  #statistics,
+  #our-customers,
+  #time,
+  #footer,
+  #asked-questions {
+    padding: 50px 0;
   }
 }
