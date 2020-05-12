@@ -11,7 +11,26 @@ Version: 1.0
 Style Index
 ==================================================
     * Basic Setup
+      - preload
+      - ScrollToTop
+      - inner
     * Navbar 
+    * Start Home page
+      -  carousel
+      -  video
+      -  ordering
+      -  Shipping
+      -  Distinguishes
+      - statistics
+      -  customers
+    * form page 
+    * Explanations Page 
+    * Customer Page
+    * faq Page
+    * Search Page 
+    * stores Page
+    * Commission Page
+    * Time Page
     * Footer Section
     * Media Query
 */
@@ -65,7 +84,7 @@ Style Index
 }
 
 body {
-  /*   overflow-x: hidden; */
+  overflow-x: hidden; 
   margin: 0;
   font-family: 'natlub-font';
   font-size: .875rem;
@@ -388,7 +407,7 @@ input[type=number] {
   position: fixed;
   right: 15px;
   bottom: 60px;
-  z-index: 1;
+  z-index: 999;
   cursor: pointer;
   -webkit-transform: translate(80px, 0);
   transform: translate(80px, 0);
@@ -1355,7 +1374,7 @@ form.Forgot-password i {
 }
 
 /*--------------------------------------------------
-  [* Start Commission Page ]
+  [* Start Time Page ]
 --------------------------------------------------*/
 
 #time {
