@@ -1468,4 +1468,8 @@ footer.page-footer .footer-copyright {
   #time .media {
     margin-bottom: 2rem !important;
   }
+
+  .search-wrapper.active .input-holder {
+    width: 300px;
+  }
 }
