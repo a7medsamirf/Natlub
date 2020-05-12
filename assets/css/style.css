@@ -1551,3 +1551,18 @@ footer.page-footer .footer-copyright {
     padding: 50px 0;
   }
 }
+
+/*medium mobile device*/
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+  #video,
+  #ordering,
+  #Shipping,
+  #Distinguishes,
+  #statistics,
+  #our-customers,
+  #time,
+  #footer,
+  #asked-questions {
+    padding: 50px 0;
+  }
+}
