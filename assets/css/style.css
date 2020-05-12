@@ -902,6 +902,50 @@ li.breadcrumb-item {
   padding: 100px 0;
 }
 
+/* ===== Start Shipping ===== */
+
+#Shipping {
+  position: relative;
+  padding: 100px 0;
+}
+
+.rgba-stylish-strong {
+  background-color: rgba(160, 133, 161, 0.75);
+}
+
+.rgba-teal-strong,
+.rgba-teal-strong:after {
+  background-color: rgba(226, 168, 65, 0.75);
+}
+
+#Shipping .card-body {
+  height: 550px;
+}
+
+
+/* ===== Start Distinguishes ===== */
+
+#Distinguishes {
+  position: relative;
+  padding: 100px 0;
+}
+#Distinguishes img
+{
+  width: 70px;
+}
+
+/* ===== Start statistics ===== */
+
+#statistics {
+  position: relative;
+  padding: 100px 0;
+}
+
+#statistics img
+{
+  width: 70px;
+}
+ 
 /*--------------------------------------------------
   [* Start form page ]
 --------------------------------------------------*/
