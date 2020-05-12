@@ -13,7 +13,7 @@ Style Index
     * Basic Setup
     * Navbar 
     * Footer Section
-    * Media Query Section
+    * Media Query
 */
 
 
@@ -587,7 +587,7 @@ li.breadcrumb-item {
 
 /* ===== Start carousel ===== */
 
-.carousel-indicators {
+#header .carousel-indicators {
   position: absolute;
   left: 0 !important;
   right: auto;
@@ -603,7 +603,7 @@ li.breadcrumb-item {
   list-style: none;
 }
 
-.carousel .carousel-indicators li {
+#header  .carousel .carousel-indicators li {
   width: 100px !important;
   height: 5px !important;
   cursor: pointer;
@@ -615,7 +615,7 @@ li.breadcrumb-item {
 }
 
 
-#carouselExampleIndicators {
+#header #carouselExampleIndicators {
   position: relative;
   z-index: 1;
   background-size: cover;
@@ -623,7 +623,7 @@ li.breadcrumb-item {
   background-color: var(--Purplebackground) !important;
 }
 
-.carousel_caption h1 {
+#header .carousel_caption h1 {
   color: var(--orangecolor) !important;
   letter-spacing: 1px;
   font-weight: 700;
@@ -631,27 +631,27 @@ li.breadcrumb-item {
   text-transform: uppercase;
 }
 
-.carousel_caption h2 {
+#header .carousel_caption h2 {
   color: var(--orangecolor) !important;
   letter-spacing: 1px;
   font-weight: 200;
   text-transform: uppercase;
 }
 
-.carousel_caption a {
+#header .carousel_caption a {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
 }
 
-.carousel-item {
+#header .carousel-item {
   min-height: 500px;
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-item a {
+#header .carousel-item a {
   background: #673AB7;
   font-size: 14px;
   color: #FFF;
@@ -659,27 +659,27 @@ li.breadcrumb-item {
   display: inline-block;
 }
 
-.carousel-item a:hover {
+#header .carousel-item a:hover {
   background: #394fa2;
   text-decoration: none;
 }
 
-.carousel-item h2 {
+#header .carousel-item h2 {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-.carousel-item p {
+#header .carousel-item p {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
 }
 
-.carousel-item a {
+#header .carousel-item a {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
 
-.carousel-item .mask img {
+#header .carousel-item .mask img {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
   display: block;
@@ -755,11 +755,11 @@ li.breadcrumb-item {
 
 @supports (transform-style:preserve-3d) {
 
-  .carousel-fade .carousel-item-left.active,
-  .carousel-fade .carousel-item-next,
-  .carousel-fade .carousel-item-prev,
-  .carousel-fade .carousel-item-prev.active,
-  .carousel-fade .carousel-item.active {
+.carousel-fade .carousel-item-left.active,
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item-prev.active,
+.carousel-fade .carousel-item.active {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
   }
@@ -873,6 +873,7 @@ li.breadcrumb-item {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
 }
+
 
 /* ===== End carousel ===== */
 
@@ -1328,7 +1329,30 @@ form.Forgot-password i {
   padding: 100px 0;
 }
 
+.carousel-multi-item .carousel-indicators .active {
+  width: 1.56rem;
+  max-width: 1.56rem;
+  height: 1.56rem;
+  background-color: var(--Purplebackground) !important;
+  border-radius: 50%;
+}
 
+.carousel-multi-item .carousel-indicators li {
+  width: 1.25rem;
+  max-width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: -3.75rem;
+  background-color: var(--Purplebackground) !important;
+}
+
+.carousel-multi-item .controls-top .btn-floating {
+  background-color: var(--Purplebackground) !important;
+
+}
+.carousel-multi-item .controls-top {
+  margin-bottom: 1.88rem;
+  text-align: right;
+}
 /*--------------------------------------------------
   [* Start footer section ]
 --------------------------------------------------*/
@@ -1394,3 +1418,29 @@ footer.page-footer .footer-copyright {
   background: transparent;
   color: #8182a8;
 }
+
+/*--------------------------------------------------
+  [* Media Query ]
+--------------------------------------------------*/
+@media (max-width: 767.98px) { 
+  #header .carousel-item .mask img {
+    max-width: 40%;
+  }
+  
+  .mask {
+    position: absolute;
+    top: 50px;
+  }
+  #header .carousel .carousel-indicators li {
+    width: 75px !important;
+}
+#video,
+#ordering,
+#Shipping,
+#Distinguishes,
+#statistics
+{
+  padding: 50px 0;
+}
+
+ }
