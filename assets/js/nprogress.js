@@ -233,7 +233,7 @@
 
 
     var bar = progress.querySelector(Settings.barSelector),
-        perc = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
+        perc = fromStart ? '100' : toBarPerc(NProgress.status || 0),
         parent = isDOM(Settings.parent)
           ? Settings.parent
           : document.querySelector(Settings.parent),
@@ -332,10 +332,14 @@
    * percentage (`-100%..0%`).
    */
 
+   
+
+/////////////////////////////////////////////////
   function toBarPerc(n) {
     return (-1 + n) * 100;
-    
   }
+
+///////////////////////////////////////////////
 
 
   /**
@@ -351,7 +355,7 @@
     } else if (Settings.positionUsing === 'translate') {
       barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
     } else {
-      barCSS = { 'margin-right': toBarPerc(n)+'%' };
+      barCSS = { 'margin-left': toBarPerc(n)+'%' };
     }
 
     barCSS.transition = 'all '+speed+'ms '+ease;

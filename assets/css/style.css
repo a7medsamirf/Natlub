@@ -935,14 +935,16 @@ li.breadcrumb-item {
 #ordering {
   position: relative;
   padding: 100px 0;
-  background: #fff2da;
-}
+/*   background: #fff2da;
+ */}
 
 /* ===== Start Shipping ===== */
 
 #Shipping {
   position: relative;
   padding: 100px 0;
+  background-image: url(../img/999.png);
+  background-size: cover;
 }
 
 .rgba-stylish-strong {
