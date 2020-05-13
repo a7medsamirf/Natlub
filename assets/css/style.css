@@ -1654,6 +1654,7 @@ footer.page-footer .footer-copyright {
   .navbar .nav-item .nav-link {
     display: inline-block;
 }
+
 }
 
 /*medium mobile device*/
@@ -1713,6 +1714,9 @@ footer.page-footer .footer-copyright {
   }
   .navbar .nav-item .nav-link {
     display: inline-block;
+}
+.navbar.scrolling-navbar.top-nav-collapse {
+  background-color: hsl(0, 0%, 100%);
 }
 }
 
