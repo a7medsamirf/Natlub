@@ -181,7 +181,16 @@ $('.customers').slick({
         arrows: false,
       }
     },
-    
+
+    {
+      breakpoint: 300,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    },
+
   ]
 });
 
