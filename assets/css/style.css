@@ -69,12 +69,14 @@ Style Index
 
 ::-webkit-scrollbar {
   width: 7px;
+  height: 300px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--Purplebackground) !important;
   color: #fff;
   -webkit-transition: all 0.8s ease-in-out;
+  height: 300px;
 
 }
 
@@ -82,6 +84,7 @@ Style Index
   background-color: var(--Purplebackground) !important;
   color: #fff;
   -webkit-transition: all 0.8s ease-in-out;
+  height: 300px;
 }
 
 body {
@@ -512,9 +515,19 @@ li.breadcrumb-item {
   background: #fff;
 }
 
+.navbar .nav-link {
+  font-size: 14px;
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+.navbar.scrolling-navbar.top-nav-collapse {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: hsla(0, 0%, 100%, 0.8);
 }
 
 .navbar.navbar-light .breadcrumb .nav-item .nav-link,
@@ -533,50 +546,51 @@ li.breadcrumb-item {
   z-index: 1;
 }
 
-.navbar .nav-item .nav-link:after {
-  content: '.';
+.navbar .nav-item :active ::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--Purplebackground) !important;
+  color: #000;
+  margin-top: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+.navbar .nav-item a::after {
+  content: '';
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
+  width: 0;
+  height: 3px;
+  background-color: var(--Purplebackground) !important;
+  color: #000;
+  margin-top: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.navbar .nav-item a:hover::after,
+.navbar .nav-item.active .nav-link:after {
   width: 100%;
-  height: 1px;
-  color: transparent;
-  background-color: var(--orangebackground) !important;
-  visibility: none;
-  opacity: 0;
-  z-index: -1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.navbar .nav-item .nav-link:hover {
-  color: #fff;
-  background: tr;
-}
-
-.navbar .nav-item .nav-link:hover:after {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
-}
-
-.navbar .nav-item .nav-link,
-.navbar .nav-item .nav-link:after,
-.navbar .nav-item .nav-link:before {
-  transition: all .5s;
-}
-
-.navbar .nav-item .nav-link:hover {
-  color: #fff !important;
+.navbar.navbar-light .breadcrumb .nav-item .nav-link:hover,
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: var(--orangecolor) !important;
 }
 
 .navbar .nav-item .nav-link.sing-up:hover {
   color: var(--Purplecolor) !important;
 }
 
-.navbar.navbar-light .breadcrumb .nav-item.active>.nav-link,
 .navbar.navbar-light .navbar-nav .nav-item.active>.nav-link {
   background-color: transparent;
 }
@@ -967,26 +981,24 @@ li.breadcrumb-item {
   width: 70px;
 }
 
-#statistics .progress-value {
-  color: #fff;
-}
 
 #statistics .progress-value {
-  position: absolute;
-  top: 0;
-  padding-top: 15px;
+
+  color: #fff;
+  position: relative;
+  top: -98px;
   font-size: 30px;
+  /* left: 140px; */
   color: var(--Purplecolor) !important;
   text-align: center;
-  transform: translateX(-100%) translateY(50%);
-  -webkit-transform: translateX(-100%) translateY(50%);
-  -moz-transform: translateX(-100%) translateY(50%);
-  -ms-transform: translateX(-100%) translateY(50%);
-  -o-transform: translateX(-100%) translateY(50%);
+  /* transform: translateX(-100%) translateY(50%); */
+  /* -webkit-transform: translateX(-100%) translateY(50%); */
 }
+
 
 #statistics .progressbar {
   position: relative;
+  text-align: center;
 }
 
 #statistics .progressbar-box {
@@ -1624,6 +1636,13 @@ footer.page-footer .footer-copyright {
   #inner-contact h4 {
     font-size: 17px;
   }
+  .navbar .nav-item a:hover::after,
+  .navbar .nav-item.active .nav-link:after {
+    width: 0px;
+  }
+  .navbar .nav-item .nav-link {
+    display: inline-block;
+}
 }
 
 /*medium mobile device*/
@@ -1676,13 +1695,12 @@ footer.page-footer .footer-copyright {
   .carousel_caption {
     padding: 50px 15px;
   }
+
+  .navbar .nav-item a:hover::after,
+  .navbar .nav-item.active .nav-link:after {
+    width: 0px;
+  }
+  .navbar .nav-item .nav-link {
+    display: inline-block;
 }
-
-
-
-
-
-
-
-
-
+}
