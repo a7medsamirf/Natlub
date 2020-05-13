@@ -73,7 +73,7 @@ Style Index
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--Purplebackground) !important;
+  background-color: var(--orangebackground) !important;
   color: #fff;
   -webkit-transition: all 0.8s ease-in-out;
   height: 300px;
@@ -81,7 +81,7 @@ Style Index
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--Purplebackground) !important;
+  background-color: var(--orangebackground) !important;
   color: #fff;
   -webkit-transition: all 0.8s ease-in-out;
   height: 300px;
@@ -1004,7 +1004,7 @@ li.breadcrumb-item {
 #statistics .progressbar-box {
   background-image: url('../img/statistics.png');
   background-size: cover;
-  padding: 100px 0;
+  padding: 75px 0;
 }
 
 /* ===== Start our-customers ===== */
@@ -1040,6 +1040,16 @@ li.breadcrumb-item {
   text-align: right;
 }
 
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow {
+  height: 40px;
+  width: 40px;
+  padding: 0px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  background-color: var(--orangebackground) !important;
+}
 /*--------------------------------------------------
   [* Start form page ]
 --------------------------------------------------*/
@@ -1703,4 +1713,15 @@ footer.page-footer .footer-copyright {
   .navbar .nav-item .nav-link {
     display: inline-block;
 }
+}
+
+
+.carousel-control-prev,
+.carousel-control-next{
+    align-items: flex-start;; /* Aligns it at the top */
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    align-items: flex-end;; /* Aligns it at the bottom */
 }

@@ -71,8 +71,15 @@ $('.scrollToTop').click(function () {
     Lightbox Init
 ===================================== */
 
-$(document).ready(function() {
-  $(".fancybox").fancybox();
+$('[data-fancybox="images"]').fancybox({
+  afterLoad : function(instance, current) {
+      var pixelRatio = window.devicePixelRatio || 1;
+
+      if ( pixelRatio > 1.5 ) {
+          current.width  = current.width  / pixelRatio;
+          current.height = current.height / pixelRatio;
+      }
+  }
 });
 
 /* ==================================
@@ -133,3 +140,47 @@ NProgress.configure({trickleSpeed: 800 }); //Adjust how often to trickle/increme
 NProgress.configure({ showSpinner: false });//Turn off loading spinner by setting it to false. (default: true)
 NProgress.configure({ parent: '#container' });//specify this to change the parent container. (default: body)
 NProgress.done(); // end
+
+
+
+
+/* ==================================
+      Start slider
+===================================== */
+
+$('.customers').slick({
+  dots: false,
+  arrows: true,
+  autoplay: true,
+  infinite: true,
+  rtl: true,
+  speed: 600,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    
+  ]
+});
+
