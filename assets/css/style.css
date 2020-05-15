@@ -783,6 +783,20 @@ li.breadcrumb-item {
   transform: translateX(0)
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  align-items: flex-start;
+  ;
+  /* Aligns it at the top */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  align-items: flex-end;
+  ;
+  /* Aligns it at the bottom */
+}
+
 @supports (transform-style:preserve-3d) {
 
   .carousel-fade .carousel-item-left.active,
@@ -911,7 +925,7 @@ li.breadcrumb-item {
 
 #video {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
   background: rgba(255, 255, 255, 0.37);
 }
 
@@ -931,10 +945,11 @@ li.breadcrumb-item {
 
 #ordering {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
   background: rgba(255, 255, 255, 0.37);
-/*   background: #fff2da;
- */}
+  /*   background: #fff2da;
+ */
+}
 
 /* ===== Start Shipping ===== */
 
@@ -961,7 +976,7 @@ li.breadcrumb-item {
 
 #Distinguishes {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
   background: rgba(255, 255, 255, 0.37);
 }
 
@@ -973,7 +988,7 @@ li.breadcrumb-item {
 
 #statistics {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
   background: rgba(255, 255, 255, 0.37);
 }
 
@@ -1009,7 +1024,7 @@ li.breadcrumb-item {
 
 #our-customers {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
   background: rgba(255, 255, 255, 0.37);
 }
 
@@ -1049,6 +1064,7 @@ li.breadcrumb-item {
   transform: translateY(-50%);
   background-color: var(--orangebackground) !important;
 }
+
 /*--------------------------------------------------
   [* Start form page ]
 --------------------------------------------------*/
@@ -1087,7 +1103,7 @@ form.Forgot-password i {
 
 #Explanations {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
 }
 
 #Explanations .step {
@@ -1152,7 +1168,7 @@ form.Forgot-password i {
 
 #Customer {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
 }
 
 #Customer .Customer-box {
@@ -1177,7 +1193,7 @@ form.Forgot-password i {
 
 #asked-questions {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
 }
 
 #asked-questions .card-header {
@@ -1209,7 +1225,7 @@ form.Forgot-password i {
 
 #Search {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
 }
 
 #Search .card.card-cascade.wider .card-body.card-body-cascade {
@@ -1378,7 +1394,7 @@ form.Forgot-password i {
 
 #stores {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
 }
 
 #stores .card {
@@ -1403,7 +1419,7 @@ form.Forgot-password i {
 
 #Commission {
   position: relative;
-  padding:  50px 0;
+  padding: 50px 0;
 }
 
 #Commission .form-control {
@@ -1645,14 +1661,19 @@ footer.page-footer .footer-copyright {
   #inner-contact h4 {
     font-size: 17px;
   }
+
   .navbar .nav-item a:hover::after,
   .navbar .nav-item.active .nav-link:after {
     width: 0px;
   }
+
   .navbar .nav-item .nav-link {
     display: inline-block;
-}
+  }
 
+  #header .carousel-item {
+    min-height: 90vh;
+  }
 }
 
 /*medium mobile device*/
@@ -1710,21 +1731,18 @@ footer.page-footer .footer-copyright {
   .navbar .nav-item.active .nav-link:after {
     width: 0px;
   }
+
   .navbar .nav-item .nav-link {
     display: inline-block;
-}
-.navbar.scrolling-navbar.top-nav-collapse {
-  background-color: hsl(0, 0%, 100%);
-}
-}
+  }
 
+  .navbar.scrolling-navbar.top-nav-collapse {
+    background-color: hsl(0, 0%, 100%);
+  }
 
-.carousel-control-prev,
-.carousel-control-next{
-    align-items: flex-start;; /* Aligns it at the top */
-}
-
-.carousel-control-prev,
-.carousel-control-next{
-    align-items: flex-end;; /* Aligns it at the bottom */
+  #header .carousel-item {
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center center;
+  }
 }
