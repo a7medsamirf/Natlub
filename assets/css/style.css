@@ -1674,6 +1674,16 @@ footer.page-footer .footer-copyright {
   #header .carousel-item {
     min-height: 90vh;
   }
+
+  #header .carousel_caption h2,
+  #header .carousel_caption h1 {
+    font-size: 22px;
+  }
+
+  #header .carousel-item .mask img {
+
+    max-width: 50%;
+  }
 }
 
 /*medium mobile device*/
@@ -1744,5 +1754,14 @@ footer.page-footer .footer-copyright {
     min-height: 90vh;
     background-size: cover;
     background-position: center center;
+  }
+  #header .carousel_caption h2,
+  #header .carousel_caption h1 {
+    font-size: 22px;
+  }
+
+  #header .carousel-item .mask img {
+
+    max-width: 50%;
   }
 }
