@@ -969,6 +969,7 @@ li.breadcrumb-item {
 
 #Shipping .card-body {
   height: 550px;
+  padding: 1.25rem 0;
 }
 
 
@@ -1609,83 +1610,6 @@ footer.page-footer .footer-copyright {
 --------------------------------------------------*/
 
 
-
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  #header .carousel-item .mask img {
-    max-width: 40%;
-  }
-
-  .mask {
-    position: absolute;
-    top: 50px;
-  }
-
-  #header .carousel .carousel-indicators li {
-    width: 75px !important;
-  }
-
-  #video,
-  #ordering,
-  #Shipping,
-  #Distinguishes,
-  #statistics,
-  #our-customers,
-  #time,
-  #footer,
-  #asked-questions,
-  #prohibited {
-    padding: 50px 0;
-  }
-
-  #time .media {
-    margin-bottom: 2rem !important;
-  }
-
-  .search-wrapper.active .input-holder {
-    width: 300px;
-  }
-
-  #Search .form-check {
-    margin-top: 3rem !important;
-  }
-
-  #inner-contact {
-    height: 350px;
-  }
-
-  #inner-contact h2 {
-    font-size: 22px;
-  }
-
-  #inner-contact h4 {
-    font-size: 17px;
-  }
-
-  .navbar .nav-item a:hover::after,
-  .navbar .nav-item.active .nav-link:after {
-    width: 0px;
-  }
-
-  .navbar .nav-item .nav-link {
-    display: inline-block;
-  }
-
-  #header .carousel-item {
-    min-height: 90vh;
-  }
-
-  #header .carousel_caption h2,
-  #header .carousel_caption h1 {
-    font-size: 22px;
-  }
-
-  #header .carousel-item .mask img {
-
-    max-width: 50%;
-  }
-}
-
 /*medium mobile device*/
 @media (max-width: 767.98px) {
   #inner-contact {
@@ -1755,6 +1679,81 @@ footer.page-footer .footer-copyright {
     background-size: cover;
     background-position: center center;
   }
+  #header .carousel_caption h2,
+  #header .carousel_caption h1 {
+    font-size: 22px;
+  }
+
+  #header .carousel-item .mask img {
+
+    max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #header .carousel-item .mask img {
+    max-width: 40%;
+  }
+
+  .mask {
+    position: absolute;
+    top: 50px;
+  }
+
+  #header .carousel .carousel-indicators li {
+    width: 75px !important;
+  }
+
+  #video,
+  #ordering,
+  #Shipping,
+  #Distinguishes,
+  #statistics,
+  #our-customers,
+  #time,
+  #footer,
+  #asked-questions,
+  #prohibited {
+    padding: 50px 0;
+  }
+
+  #time .media {
+    margin-bottom: 2rem !important;
+  }
+
+  .search-wrapper.active .input-holder {
+    width: 300px;
+  }
+
+  #Search .form-check {
+    margin-top: 3rem !important;
+  }
+
+  #inner-contact {
+    height: 350px;
+  }
+
+  #inner-contact h2 {
+    font-size: 22px;
+  }
+
+  #inner-contact h4 {
+    font-size: 17px;
+  }
+
+  .navbar .nav-item a:hover::after,
+  .navbar .nav-item.active .nav-link:after {
+    width: 0px;
+  }
+
+  .navbar .nav-item .nav-link {
+    display: inline-block;
+  }
+
+  #header .carousel-item {
+    min-height: 90vh;
+  }
+
   #header .carousel_caption h2,
   #header .carousel_caption h1 {
     font-size: 22px;
