@@ -72,13 +72,13 @@ $('.scrollToTop').click(function () {
 ===================================== */
 
 $('[data-fancybox="images"]').fancybox({
-  afterLoad : function(instance, current) {
-      var pixelRatio = window.devicePixelRatio || 1;
+  afterLoad: function (instance, current) {
+    var pixelRatio = window.devicePixelRatio || 1;
 
-      if ( pixelRatio > 1.5 ) {
-          current.width  = current.width  / pixelRatio;
-          current.height = current.height / pixelRatio;
-      }
+    if (pixelRatio > 1.5) {
+      current.width = current.width / pixelRatio;
+      current.height = current.height / pixelRatio;
+    }
   }
 });
 
@@ -103,26 +103,56 @@ function searchToggle(obj, evt) {
 ===================================== */
 $(document).ready(function ($) {
   function animateElements() {
-      $('.progressbar').each(function () {
-          var elementPos = $(this).offset().top;
-          var topOfWindow = $(window).scrollTop();
-          var percent = $(this).find('.circle').attr('data-percent');
-          var animate = $(this).data('animate');
-          if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
-              $(this).data('animate', true);
-              $(this).find('.circle').circleProgress({
+    $('.progressbar').each(function () {
+      var elementPos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      var percent = $(this).find('.circle').attr('data-percent');
+      var animate = $(this).data('animate');
+      if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
+        $(this).data('animate', true);
+        $(this).find('.circle').circleProgress({
 
-                  value: percent / 100,
-                  size : 140,
-                  thickness: 10,
-                  fill: {
-                      color: '#e2a841'
-                  }
-              }).on('circle-animation-progress', function (event, progress, stepValue) {
-                  $(this).find('.progress-value').text((stepValue*100).toFixed(0) + "k");
-              }).stop();
+          value: percent / 100,
+          size: 140,
+          thickness: 10,
+          fill: {
+            color: '#e2a841'
           }
-      });
+        }).on('circle-animation-progress', function (event, progress, stepValue) {
+          $(this).find('.progress-value').text((stepValue * 100).toFixed(0) + "k");
+        }).stop();
+        $(this).find('.second').circleProgress({
+          value: percent / 100,
+          size: 140,
+          thickness: 10,
+          fill: {
+            color: '#00ff00'
+          }
+        }).on('circle-animation-progress', function (event, progress, stepValue) {
+          $(this).find('.progress-value').text((stepValue * 100).toFixed(0) + "k");
+        }).stop();
+        $(this).find('.Third').circleProgress({
+          value: percent / 100,
+          size: 140,
+          thickness: 10,
+          fill: {
+            color: '#a085a1'
+          }
+        }).on('circle-animation-progress', function (event, progress, stepValue) {
+          $(this).find('.progress-value').text((stepValue * 100).toFixed(0) + "k");
+        }).stop();
+        $(this).find('.Four').circleProgress({
+          value: percent / 100,
+          size: 140,
+          thickness: 10,
+          fill: {
+            color: '#d82f4e'
+          }
+        }).on('circle-animation-progress', function (event, progress, stepValue) {
+          $(this).find('.progress-value').text((stepValue * 100).toFixed(0) + "k");
+        }).stop();
+      }
+    });
   }
 
   animateElements();
@@ -135,10 +165,19 @@ $(document).ready(function ($) {
 NProgress.start(); // start    
 NProgress.set(0.4); // To set a progress percentage, call .set(n), where n is a number between 0..1
 NProgress.inc(); // To increment the progress bar, just use .inc(). This increments it with a random amount. This will never get to 100%: use it for every image load (or similar).If you want to increment by a specific value, you can pass that as a parameter
-NProgress.configure({ ease: 'ease', speed: 1000 }); // Adjust animation settings using easing (a CSS easing string) and speed (in ms). (default: ease and 200)
-NProgress.configure({trickleSpeed: 800 }); //Adjust how often to trickle/increment, in ms.
-NProgress.configure({ showSpinner: false });//Turn off loading spinner by setting it to false. (default: true)
-NProgress.configure({ parent: '#container' });//specify this to change the parent container. (default: body)
+NProgress.configure({
+  ease: 'ease',
+  speed: 1000
+}); // Adjust animation settings using easing (a CSS easing string) and speed (in ms). (default: ease and 200)
+NProgress.configure({
+  trickleSpeed: 800
+}); //Adjust how often to trickle/increment, in ms.
+NProgress.configure({
+  showSpinner: false
+}); //Turn off loading spinner by setting it to false. (default: true)
+NProgress.configure({
+  parent: '#container'
+}); //specify this to change the parent container. (default: body)
 NProgress.done(); // end
 
 
@@ -157,8 +196,7 @@ $('.customers').slick({
   speed: 600,
   slidesToShow: 5,
   slidesToScroll: 1,
-  responsive: [
-    {
+  responsive: [{
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
@@ -193,4 +231,3 @@ $('.customers').slick({
 
   ]
 });
-
