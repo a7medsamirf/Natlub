@@ -23,6 +23,8 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
     <link rel="stylesheet" href="assets/css/mdb.min.css">
     <!-- nprogress CSS -->
     <link rel="stylesheet" href="assets/css/nprogress.css">
+    <!-- lightbox CSS -->
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -107,198 +109,209 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
         <div class="container">
 
             <div class="row">
-
-                <div class="col-lg-4">
-                      <h3 class="Purple-color font-bold mb-4">  المُشتريات. </h3>
-                      <h3 class="orange-color font-bold mb-4"> التحويل الدولي.</h3>
-                      <h3 class="orange-color font-bold mb-4"> تحويل بين المحافظ. </h3>
-                      <h3 class="orange-color font-bold mb-4">  فواتير نطلب لك.</h3>
-                      <h3 class="orange-color font-bold mb-4"> شحن سوا. </h3>
+                <div class="col-3">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                      aria-controls="v-pills-home" aria-selected="true">المُشتريات.</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                      aria-controls="v-pills-profile" aria-selected="false">التحويل الدولي.</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                      aria-controls="v-pills-messages" aria-selected="false">تحويل بين المحافظ.</a>
+                      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                      aria-controls="v-pills-settings" aria-selected="false"> فواتير نطلب لك. </a>
+                    <a class="nav-link" id="v-pills-settings2-tab" data-toggle="pill" href="#v-pills-settings2" role="tab"
+                      aria-controls="v-pills-settings2" aria-selected="false">شحن سوا. </a>
                   </div>
-            
-                <div class="col-lg-8 mb-4">
-                    <h3 class="font-weight-bold orange-color pb-2">وصف الخدمة:</h3>
-                    <p class="lead pt-2 orange-color mb-5">يمكنك من شراء احتياجاتك من المواقع في أي وقت.</p>
-
-                    <ol class="step pl-0 pt-3 pb-3">
-                        <li class="step-element pb-0">
-                            <div class="step-number">
-                                <span class="number">1</span>
-                            </div>
-                            <div class="step-excerpt">
-                                <h6 class="font-weight-bold Purple-color mb-3">حمل تطبيق نطلُب لك: </h6>
-                                <div class="d-flex google-store">
-                                    <a href="#"><img class="" src="assets/img/google-play.png" alt=""></a>
-                                    <a href=""><img class="" src="assets/img/app-store.png" alt=""></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="step-element pb-0">
-                            <div class="step-number">
-                                <span class="number">2</span>
-                            </div>
-                            <div class="step-excerpt">
-                                <p class="Purple-color mt-2"> إذا كنت عميل نطلب لك، ببساطة سجل حسابك بإستخدام رقم جوالك</p>
-                            </div>
-                        </li>
-                        <li class="step-element pb-0">
-                            <div class="step-number">
-                                <span class="number">3</span>
-                            </div>
-                            <div class="step-excerpt">
-                                <p class="Purple-color mt-2">إذا كنت عميل لمشغل آخر، يجب عليك توثيق حسابك من خلال خدمة أبشر</p>
-                            </div>
-                        </li>
-                        <li class="step-element pb-0">
-                            <div class="step-number">
-                                <span class="number">4</span>
-                            </div>
-                            <div class="step-excerpt">
-                                <p class="Purple-color mt-2">قم بتعبئة نموذج معلومات العميل</p>
-
-                            </div>
-                        </li>
-                        <li class="step-element pb-0">
-                            <div class="step-number">
-                                <span class="number">5</span>
-                            </div>
-                            <div class="step-excerpt">
-                                <p class="Purple-color mt-2">أضف الأموال في حسابك</p>
-
-                            </div>
-                        </li>
-                        <li class="step-element pb-0">
-                            <div class="step-number">
-                                <span class="number">6</span>
-                            </div>
-                            <div class="step-excerpt">
-                                <p class="Purple-color mt-2">اضغط “تأكيد”</p>
-
-                            </div>
-                        </li>
-                    </ol>
-
                 </div>
+                <div class="col-9" style="border-right: 2px solid;height: 100%;">
+                  <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">  
+                         <h3 class="font-weight-bold orange-color pb-2">وصف الخدمة:</h3>
+                        <p class="lead pt-2 orange-color mb-5">يمكنك من شراء احتياجاتك من المواقع في أي وقت.</p>
+    
+                        <ol class="step pl-0 pt-3 pb-3">
+                            <li class="step-element pb-0">
+                                <div class="step-number">
+                                    <span class="number">1</span>
+                                </div>
+                                <div class="step-excerpt">
+                                    <h6 class="font-weight-bold Purple-color mb-3">حمل تطبيق نطلُب لك: </h6>
+                                    <div class="d-flex google-store">
+                                        <a href="#"><img class="" src="assets/img/google-play.png" alt=""></a>
+                                        <a href=""><img class="" src="assets/img/app-store.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="step-element pb-0">
+                                <div class="step-number">
+                                    <span class="number">2</span>
+                                </div>
+                                <div class="step-excerpt">
+                                    <p class="Purple-color mt-2"> إذا كنت عميل نطلب لك، ببساطة سجل حسابك بإستخدام رقم جوالك</p>
+                                </div>
+                            </li>
+                            <li class="step-element pb-0">
+                                <div class="step-number">
+                                    <span class="number">3</span>
+                                </div>
+                                <div class="step-excerpt">
+                                    <p class="Purple-color mt-2">إذا كنت عميل لمشغل آخر، يجب عليك توثيق حسابك من خلال خدمة أبشر</p>
+                                    <div class="d-flex google-store">
+                                     <a class="fancybox" href="assets/img/Explanations-b.png" data-fancybox="gallery">
+                                          <img class="card-img-top" src="assets/img/Explanations-b.png" alt="Card image cap">
+                                    </a>
+                                    </div>
+                                </div>
+                            </li>
+                       
+                            <li class="step-element pb-0">
+                                <div class="step-number">
+                                    <span class="number">4</span>
+                                </div>
+                                <div class="step-excerpt">
+                                    <p class="Purple-color mt-2">قم بتعبئة نموذج معلومات العميل</p>
+                                    <div class="d-flex google-store">
+                                        <a class="fancybox" href="assets/img/Explanations-b.png" data-fancybox="gallery" >
+                                          <img class="card-img-top" src="assets/img/Explanations-b.png" alt="Card image cap">
+                                        </a>    
+                                      </div>
+    
+                                </div>
+                            </li>
+                            <li class="step-element pb-0">
+                                <div class="step-number">
+                                    <span class="number">5</span>
+                                </div>
+                                <div class="step-excerpt">
+                                    <p class="Purple-color mt-2">أضف الأموال في حسابك</p>
+    
+                                </div>
+                            </li>
+                            <li class="step-element pb-0">
+                                <div class="step-number">
+                                    <span class="number">6</span>
+                                </div>
+                                <div class="step-excerpt">
+                                    <p class="Purple-color mt-2">اضغط “تأكيد”</p>
+    
+                                </div>
+                            </li>
+                        </ol></div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <h3 class="font-weight-bold orange-color pb-2">التحويل الدولي.</h3></div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"> <h3 class="font-weight-bold orange-color pb-2">تحويل بين المحافظ.</h3></div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"> <h3 class="font-weight-bold orange-color pb-2">فواتير نطلب لك.</h3></div>
+                    <div class="tab-pane fade" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings2-tab"> <h3 class="font-weight-bold orange-color pb-2">شحن سوا.</h3></div>
 
-            </div>
+                  </div>
+                </div>
+              </div>
+
         </div>
 
     </section>
 
    <!-- End Explanations -->
 
-  <!-- Footer -->
-  <footer id="footer" class="page-footer">
+    <!-- Footer -->
+    <footer id="footer" class="page-footer">
 
-    <!-- Footer Links -->
-    <div class="container mt-5">
-        <div class="row">
-            <!-- First column -->
-            <div class="col-sm-12 col-lg-5 col-xl-5 mb-r">
-                <h3 class="title font-bold mb-4">
-                    <img class="footer-logo " src="assets/img/footer-logo.png" alt="">
-                </h3>
-
-                <p>
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                    حيث يمكنك أن
-                    تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
-
-                </p>
-                <div class="connected-social">
-                    <!-- Grid row -->
-                    <div class="row py-4 d-flex">
-                        <!-- Grid column -->
-                        <div class="col-md-12">
-                            <!-- Facebook -->
-                            <a class="fb-ic" href="#">
-                                <i class="fab fa-facebook-f"> </i>
-                            </a>
-                            <!-- Twitter -->
-                            <a class="tw-ic">
-                                <i class="fab fa-twitter"> </i>
-                            </a>
-                            <!-- Linkedin -->
-                            <a class="li-ic">
-                                <i class="fab fa-linkedin-in"> </i>
-                            </a>
-                            <!-- Instagram -->
-                            <a class="ins-ic">
-                                <i class="fab fa-instagram"> </i>
-                            </a>
-                            <!-- whatsapp -->
-                            <a class="wha-ic">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                        <!-- Grid column -->
+        <!-- Footer Links -->
+        <div class="container mt-4">
+            <div class="row">
+                <!-- First column -->
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <h4 class="title font-bold mb-4">
+                        حمل التطبيق:
+                    </h4>
+                    <div class="d-flex google-store">
+                        <a href="#"><img class="" src="assets/img/google-play.png" alt=""></a>
+                        <a href=""><img class="" src="assets/img/app-store.png" alt=""></a>
                     </div>
-                    <!-- Grid row -->
+                    <h4 class="title font-bold mb-4 mt-4">
+                        طرق الدفع:
+                    </h4>
+                    <div class="d-flex pay">
+                        <img src="assets/img/001.png" alt="">
+                        <img src="assets/img/002.png" alt="">
+                        <img src="assets/img/003.png" alt="">
+                    </div>
                 </div>
-            </div>
-            <!-- First column -->
-            <!-- Second column -->
-            <div class="col-sm-12 col-lg-3 col-xl-3 ">
-                <h4 class="title font-bold mb-4">
-                    خريطة الموقع
-                </h4>
+                <!-- First column -->
+                <!-- Second column -->
+                <div class="col-sm-12 col-lg-3 col-xl-3 ">
+                    <h4 class="title font-bold mb-4">
+                        خريطة الموقع
+                    </h4>
 
-                <p>
-                    <a href="faq.html">الاسئلة الشائعة</a>
-                </p>
-                <p>
-                    <a href="prohibited.html">السلع الممنوعة</a>
-                </p>
-                <p>
-                    <a href="stores.html">المتاجر الموثوقة</a>
+                    <p>
+                        <a href="faq.html">الاسئلة الشائعة</a>
+                    </p>
+                    <p>
+                        <a href="prohibited.html">السلع الممنوعة</a>
+                    </p>
+                    <p>
+                        <a href="stores.html">المتاجر الموثوقة</a>
 
-                </p>
-                <p>
-                    <a href="Search.html">البحث</a>
+                    </p>
+                    <p>
+                        <a href="Search.html">البحث</a>
 
-                </p>
-                <p>
-                    <a href="Explanations.html">الشروحات</a>
-                </p>
+                    </p>
+                    <p>
+                        <a href="Explanations.html">الشروحات</a>
+                    </p>
 
-            </div>
-            <!-- Second column -->
-
-            <!-- Third column -->
-            <div class="col-sm-6 col-lg-2 col-xl-2">
-                <h4 class="title font-bold mb-4">
-                    حمل التطبيق:
-                </h4>
-                <div class="d-flex google-store">
-                    <a href="#"><img class="" src="assets/img/google-play.png" alt=""></a>
-                    <a href=""><img class="" src="assets/img/app-store.png" alt=""></a>
                 </div>
-                <h4 class="title font-bold mb-4 mt-4">
-                    طرق الدفع:
-                </h4>
-                <div class="d-flex pay">
-                    <img src="assets/img/001.png" alt="">
-                    <img src="assets/img/002.png" alt="">
-                    <img src="assets/img/003.png" alt="">
+                <!-- Second column -->
+
+                <!-- Third column -->
+                <div class="col-sm-12 col-lg-5 col-xl-5 mb-r">
+                    <h4 class="title font-bold mb-4">
+                        تابعنا على:
+                    </h4>
+
+                    <div class="connected-social">
+                        <!-- Grid row -->
+                        <div class="row">
+                            <!-- Grid column -->
+                            <div class="col-md-12">
+
+                                <!-- Twitter -->
+                                <a class="tw-ic">
+                                    <i class="fab fa-twitter"> </i>
+                                </a>
+                                <!-- Instagram -->
+                                <a class="ins-ic">
+                                    <i class="fab fa-instagram"> </i>
+                                </a>
+                                <!-- whatsapp -->
+                                <a class="wha-ic">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                    </div>
                 </div>
+            
+                <!-- Third column -->
+
             </div>
-            <!-- Third column -->
 
         </div>
+        <!-- Footer Links -->
 
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-right py-3">
-        <div class="container">
-            © 2020 جميع الحقوق محفوظه: <a href="#" target="_blank"> <strong>نطلب لك</strong></a>
+        <!-- Copyright -->
+        <div class="footer-copyright text-right py-3">
+            <div class="container ">
+                © 2020 جميع الحقوق محفوظه: <a href="#" target="_blank"> <strong>نطلب لك</strong></a>
+            </div>
         </div>
-    </div>
-    <!-- Copyright -->
+        <!-- Copyright -->
 
-</footer>
-<!-- Footer -->
+    </footer>
+    <!-- Footer -->
 
     <!-- ======== Start ScrollToTop ======== -->
 
@@ -320,6 +333,8 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
     <script type="text/javascript" src="assets/js/mdb.min.js"></script>
     <!-- nprogress JavaScript -->
     <script type="text/javascript" src="assets/js/nprogress.js"></script>
+    <!-- lightbox JavaScript -->
+    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
     <!-- nicescroll JavaScript -->
     <script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
     <!--  custom scripts (optional) -->

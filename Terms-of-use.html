@@ -118,53 +118,28 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
     </section>
     <!-- End Terms-of-use -->
 
-    <!-- Footer -->
-    <footer id="footer" class="page-footer">
+      <!-- Footer -->
+      <footer id="footer" class="page-footer">
 
         <!-- Footer Links -->
-        <div class="container mt-5">
+        <div class="container mt-4">
             <div class="row">
                 <!-- First column -->
-                <div class="col-sm-12 col-lg-5 col-xl-5 mb-r">
-                    <h3 class="title font-bold mb-4">
-                        <img class="footer-logo " src="assets/img/footer-logo.png" alt="">
-                    </h3>
-
-                    <p>
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                        حيث يمكنك أن
-                        تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
-
-                    </p>
-                    <div class="connected-social">
-                        <!-- Grid row -->
-                        <div class="row py-4 d-flex">
-                            <!-- Grid column -->
-                            <div class="col-md-12">
-                                <!-- Facebook -->
-                                <a class="fb-ic" href="#">
-                                    <i class="fab fa-facebook-f"> </i>
-                                </a>
-                                <!-- Twitter -->
-                                <a class="tw-ic">
-                                    <i class="fab fa-twitter"> </i>
-                                </a>
-                                <!-- Linkedin -->
-                                <a class="li-ic">
-                                    <i class="fab fa-linkedin-in"> </i>
-                                </a>
-                                <!-- Instagram -->
-                                <a class="ins-ic">
-                                    <i class="fab fa-instagram"> </i>
-                                </a>
-                                <!-- whatsapp -->
-                                <a class="wha-ic">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
-                            <!-- Grid column -->
-                        </div>
-                        <!-- Grid row -->
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <h4 class="title font-bold mb-4">
+                        حمل التطبيق:
+                    </h4>
+                    <div class="d-flex google-store">
+                        <a href="#"><img class="" src="assets/img/google-play.png" alt=""></a>
+                        <a href=""><img class="" src="assets/img/app-store.png" alt=""></a>
+                    </div>
+                    <h4 class="title font-bold mb-4 mt-4">
+                        طرق الدفع:
+                    </h4>
+                    <div class="d-flex pay">
+                        <img src="assets/img/001.png" alt="">
+                        <img src="assets/img/002.png" alt="">
+                        <img src="assets/img/003.png" alt="">
                     </div>
                 </div>
                 <!-- First column -->
@@ -196,23 +171,36 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
                 <!-- Second column -->
 
                 <!-- Third column -->
-                <div class="col-sm-6 col-lg-2 col-xl-2">
+                <div class="col-sm-12 col-lg-5 col-xl-5 mb-r">
                     <h4 class="title font-bold mb-4">
-                        حمل التطبيق:
+                        تابعنا على:
                     </h4>
-                    <div class="d-flex google-store">
-                        <a href="#"><img class="" src="assets/img/google-play.png" alt=""></a>
-                        <a href=""><img class="" src="assets/img/app-store.png" alt=""></a>
-                    </div>
-                    <h4 class="title font-bold mb-4 mt-4">
-                        طرق الدفع:
-                    </h4>
-                    <div class="d-flex pay">
-                        <img src="assets/img/001.png" alt="">
-                        <img src="assets/img/002.png" alt="">
-                        <img src="assets/img/003.png" alt="">
+
+                    <div class="connected-social">
+                        <!-- Grid row -->
+                        <div class="row">
+                            <!-- Grid column -->
+                            <div class="col-md-12">
+
+                                <!-- Twitter -->
+                                <a class="tw-ic">
+                                    <i class="fab fa-twitter"> </i>
+                                </a>
+                                <!-- Instagram -->
+                                <a class="ins-ic">
+                                    <i class="fab fa-instagram"> </i>
+                                </a>
+                                <!-- whatsapp -->
+                                <a class="wha-ic">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
                     </div>
                 </div>
+            
                 <!-- Third column -->
 
             </div>
@@ -222,14 +210,14 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
 
         <!-- Copyright -->
         <div class="footer-copyright text-right py-3">
-            <div class="container">
+            <div class="container ">
                 © 2020 جميع الحقوق محفوظه: <a href="#" target="_blank"> <strong>نطلب لك</strong></a>
             </div>
         </div>
         <!-- Copyright -->
 
     </footer>
-    <!-- Footer -->
+    <!-- Footer -->  
     <!-- ======== Start ScrollToTop ======== -->
 
     <a class="scrollToTop" href="#">
@@ -254,6 +242,26 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
     <script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
     <!--  custom scripts (optional) -->
     <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script>
+        NProgress.start(); // start    
+        NProgress.set(0.1); // To set a progress percentage, call .set(n), where n is a number between 0..1
+        NProgress
+        .inc(); // To increment the progress bar, just use .inc(). This increments it with a random amount. This will never get to 100%: use it for every image load (or similar).If you want to increment by a specific value, you can pass that as a parameter
+        NProgress.configure({
+            ease: 'ease',
+            speed: 2000
+        }); // Adjust animation settings using easing (a CSS easing string) and speed (in ms). (default: ease and 200)
+        NProgress.configure({
+            trickleSpeed: 1000
+        }); //Adjust how often to trickle/increment, in ms.
+        NProgress.configure({
+            showSpinner: true
+        }); //Turn off loading spinner by setting it to false. (default: true)
+        NProgress.configure({
+            parent: 'body'
+        }); //specify this to change the parent container. (default: body)
+        NProgress.done(); // end
+    </script>
 
 </body>
 

@@ -29,18 +29,17 @@ $(document).ready(function () {
       Start niceScroll
 ===================================== */
 
-/* $(document).ready(function () {
+ $(document).ready(function () {
   $("body").niceScroll({
-    scrollspeed: "90",
-    cursorcolor: "#a085a1",
-    cursorborder: "3px solid #a085a1",
+    scrollspeed: "110",
+    cursorcolor: "#e2a841",
+    cursorborder: "5px solid #e2a841",
     cursorborderradius: 0,
-    sensitiverail: true,
     horizrailenabled: false,
     cursorfixedheight: 250
   });
 });
- */
+ 
 
 /* ==================================
       Check the scroll position
@@ -72,6 +71,7 @@ $('.scrollToTop').click(function () {
 ===================================== */
 
 $('[data-fancybox="images"]').fancybox({
+  rtl: true,
   afterLoad: function (instance, current) {
     var pixelRatio = window.devicePixelRatio || 1;
 
@@ -116,7 +116,7 @@ $(document).ready(function ($) {
           size: 140,
           thickness: 10,
           fill: {
-            color: '#e2a841'
+            color: '#c11a6f'
           }
         }).on('circle-animation-progress', function (event, progress, stepValue) {
           $(this).find('.progress-value').text((stepValue * 100).toFixed(0) + "k");
@@ -136,7 +136,7 @@ $(document).ready(function ($) {
           size: 140,
           thickness: 10,
           fill: {
-            color: '#a085a1'
+            color: '#678fff'
           }
         }).on('circle-animation-progress', function (event, progress, stepValue) {
           $(this).find('.progress-value').text((stepValue * 100).toFixed(0) + "k");
@@ -162,21 +162,23 @@ $(document).ready(function ($) {
 /* ==================================
       Start NProgress
 ===================================== */
+
+
 NProgress.start(); // start    
-NProgress.set(0.4); // To set a progress percentage, call .set(n), where n is a number between 0..1
+NProgress.set(0.1); // To set a progress percentage, call .set(n), where n is a number between 0..1
 NProgress.inc(); // To increment the progress bar, just use .inc(). This increments it with a random amount. This will never get to 100%: use it for every image load (or similar).If you want to increment by a specific value, you can pass that as a parameter
 NProgress.configure({
   ease: 'ease',
-  speed: 1000
+  speed: 2000
 }); // Adjust animation settings using easing (a CSS easing string) and speed (in ms). (default: ease and 200)
 NProgress.configure({
-  trickleSpeed: 800
+  trickleSpeed: 1000
 }); //Adjust how often to trickle/increment, in ms.
 NProgress.configure({
-  showSpinner: false
+  showSpinner: true
 }); //Turn off loading spinner by setting it to false. (default: true)
 NProgress.configure({
-  parent: '#container'
+  parent: 'body'
 }); //specify this to change the parent container. (default: body)
 NProgress.done(); // end
 
