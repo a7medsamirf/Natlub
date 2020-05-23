@@ -40,6 +40,22 @@ $(document).ready(function () {
   });
 });
  
+/* ==================================
+      Loading btn
+===================================== */
+$(document).ready(function() {
+  $('#Loading').on('click', function() {
+    var $this = $(this);
+    var loadingText = '<span class="spinner-border spinner-border-sm ml-2" role="status" aria-hidden="true"></span> جارى التحميل...';
+    if ($(this).html() !== loadingText) {
+      $this.data('original-text', $(this).html());
+      $this.html(loadingText);
+    }
+    setTimeout(function() {
+      $this.html($this.data('original-text'));
+    }, 1000);
+  });
+})
 
 /* ==================================
       Check the scroll position
@@ -233,3 +249,4 @@ $('.customers').slick({
 
   ]
 });
+

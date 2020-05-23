@@ -1036,7 +1036,7 @@ a.nav-link.login.btn.btn-info {
 #statistics {
   position: relative;
   padding: 50px 0;
-  background: rgba(255, 255, 255, 0.37);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 #statistics img {
@@ -1229,6 +1229,7 @@ form.Forgot-password i {
 #Customer {
   position: relative;
   padding: 50px 0;
+  background: rgb(255, 255, 255, 0.5);
 }
 
 #Customer .Customer-box {
@@ -1457,6 +1458,11 @@ form.Forgot-password i {
   top: 10px;
 }
 
+#Search .card-ecommerce .form-check
+{
+    position: absolute;
+    z-index: 99;
+}
 /*--------------------------------------------------
   [* Start stores Page ]
 --------------------------------------------------*/
@@ -1482,11 +1488,11 @@ form.Forgot-password i {
   height: 50px;
 }
 
-#stores .card:hover
+/* #stores .card:hover
 {
   background: rgb(97, 97, 97);
   z-index: 99;
-}
+} */
 /*--------------------------------------------------
   [* Start Commission Page ]
 --------------------------------------------------*/
@@ -1552,6 +1558,7 @@ form.Forgot-password i {
 #time {
   position: relative;
   padding-bottom: 100px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 #time .media-body {
@@ -1809,6 +1816,24 @@ footer.page-footer .footer-copyright {
   #ordering .ordering-img {
     display: none;
   }
+
+  #Shipping .card-body h4 {
+    margin: 0px 30px;
+    font-size: 15px;
+  }
+
+  #Shipping .card-body p {
+    font-size: 12px;
+  }
+
+  #Shipping .card-body {
+    height: 522px;
+    padding: 1.25rem 0;
+  }
+
+  #Shipping .card-body h5.striped {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1849,6 +1874,7 @@ footer.page-footer .footer-copyright {
   #Search .form-check {
     margin-top: 3rem !important;
   }
+
 
   #inner-contact {
     height: 300px;
