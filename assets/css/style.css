@@ -237,7 +237,10 @@ select {
   color: #a085a1 !important;
   color: #a085a1 !important;
   background: #fff2da !important;
+}
 
+select.browser-default {
+  display: inline-block !important;
 }
 
 .custom-select {

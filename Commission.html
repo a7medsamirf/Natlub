@@ -165,16 +165,32 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
 
                         <div class="card-body">
                             <!-- Default input -->
-                            <div class="form-group">
+                            <div class="d-flex">
+                                <div class="form-group">
+                                    <label for="exampleForm1">شركة الشحن </label>
+                                    <select class="browser-default custom-select selectpicker" >
+                                        <option value="2">فيدكس </option>
+                                        <option value="1">الوزن </option>
+                                        <option value="3">دي اتش ال</option>
+                                        <option value="4">UPS</option>
+                                      </select>
+                                </div>
+                            <div class="form-group  mr-3">
                                 <label for="exampleForm2">ما هو الوزن بالباوند (رطل)؟</label>
-                                <input type="number" id="exampleForm2" class="form-control">
+                                <select class="browser-default custom-select selectpicker" >
+                                    <option value="1">1 باوند</option>
+                                    <option value="2">2 باوند</option>
+                                    <option value="3">3 باوند</option>
+                                    <option value="4">4 باوند</option>
+                                    <option value="5">5 باوند</option>
+                                    <option value="6">6 باوند</option>
+                                </select>
                             </div>
-                            <div class="form-group">
 
-                                <button class="btn btn-info btn-md" type="submit">أحسب سعر الشحن</button>
-
-                            </div>
-
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-info btn-md" type="submit">أحسب سعر الشحن</button>
+                        </div>
                         </div>
                     </div>
                 </div>
