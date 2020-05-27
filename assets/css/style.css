@@ -1536,7 +1536,7 @@ form.Forgot-password i {
 
 #stores .card:hover:before {
   background-color: var(--Purplebackground) !important;
-  opacity: .7;
+  opacity: .5;
 
 }
 
