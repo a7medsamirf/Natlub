@@ -198,7 +198,20 @@ NProgress.configure({
 }); //specify this to change the parent container. (default: body)
 NProgress.done(); // end
 
+/* ==================================
+      Start mdbRange
+===================================== */
 
+$(document).ready(function ($) {
+
+$('#multi13').mdbRange({
+  single: {
+    active: true,
+    counting: true,
+    countingTarget: '#ex'
+  }
+});
+});
 
 
 /* ==================================
@@ -251,54 +264,166 @@ $('.customers').slick({
 });
 
 
+var timezone = [
+  {
+    "value": "Dateline Standard Time",
+    "abbr": "DST",
+    "offset": -12,
+    "isdst": false,
+    "text": "(UTC-12:00) International Date Line West",
+    "utc": [
+      "Etc/GMT+12"
+    ]
+  },
+  {
+    "value": "UTC-11",
+    "abbr": "U",
+    "offset": -11,
+    "isdst": false,
+    "text": "(UTC-11:00) Coordinated Universal Time-11",
+    "utc": [
+      "Etc/GMT+11",
+      "Pacific/Midway",
+      "Pacific/Niue",
+      "Pacific/Pago_Pago"
+    ]
+  },
+  {
+    "value": "Eastern Standard Time",
+    "abbr": "EDT",
+    "offset": -4,
+    "isdst": true,
+    "text": "(UTC-05:00) Eastern Time (US & Canada)",
+    "utc": [
+      "America/Detroit",
+      "America/Havana",
+      "America/Indiana/Petersburg",
+      "America/Indiana/Vincennes",
+      "America/Indiana/Winamac",
+      "America/Iqaluit",
+      "America/Kentucky/Monticello",
+      "America/Louisville",
+      "America/Montreal",
+      "America/Nassau",
+      "America/New_York",
+      "America/Nipigon",
+      "America/Pangnirtung",
+      "America/Port-au-Prince",
+      "America/Thunder_Bay",
+      "America/Toronto",
+      "EST5EDT"
+    ]
+  },
 
-var dialLines = document.getElementsByClassName('diallines');
-var clockEl = document.getElementsByClassName('clock')[0];
+  {
+    "value": "Arab Standard Time",
+    "abbr": "AST",
+    "offset": 3,
+    "isdst": false,
+    "text": "(UTC+03:00) Kuwait, Riyadh",
+    "utc": [
+      "Asia/Aden",
+      "Asia/Bahrain",
+      "Asia/Kuwait",
+      "Asia/Qatar",
+      "Asia/Riyadh"
+    ]
+  },
+];
 
-for (var i = 1; i < 60; i++) {
-  clockEl.innerHTML += "<div class='diallines'></div>";
-  dialLines[i].style.transform = "rotate(" + 6 * i + "deg)";
-}
 
-function clock() {
-  var weekday = new Array(7),
-      d = new Date(),
-      h = d.getHours(),
-      m = d.getMinutes(),
-      s = d.getSeconds(),
-      date = d.getDate(),
-      month = d.getMonth() + 1,
-      year = d.getFullYear(),
-           
-      hDeg = h * 30 + m * (360/720),
-      mDeg = m * 6 + s * (360/3600),
-      sDeg = s * 6,
-      
-      hEl = document.querySelector('.hour-hand'),
-      mEl = document.querySelector('.minute-hand'),
-      sEl = document.querySelector('.second-hand'),
-      dateEl = document.querySelector('.date'),
-      dayEl = document.querySelector('.day');
+// plugin start from here
+(function($){
 
-      weekday[0] = "Sunday";
-      weekday[1] = "Monday";
-      weekday[2] = "Tuesday";
-      weekday[3] = "Wednesday";
-      weekday[4] = "Thursday";
-      weekday[5] = "Friday";
-      weekday[6] = "Saturday";
-  
-      var day = weekday[d.getDay()];
-  
-  if(month < 9) {
-    month = "0" + month;
-  }
-  
-  hEl.style.transform = "rotate("+hDeg+"deg)";
-  mEl.style.transform = "rotate("+mDeg+"deg)";
-  sEl.style.transform = "rotate("+sDeg+"deg)";
-  dateEl.innerHTML = date+"/"+month+"/"+year;
-  dayEl.innerHTML = day;
-}
+    $.fn.worldClock = function(){
+        clockInit(this);
+    }
 
-setInterval("clock()", 100);
+    var clockInit = function(obj){
+        obj.each(function(){
+            var t = getTimezoneArray( $(this).attr("data-timezone") );
+            runClock( $(this), t );
+        });
+    }
+
+    var runClock = function( el, timezone ){
+        setInterval(function(){
+            var clockArray = getClock(timezone);
+            setClockHTML( el, clockArray );
+        }, 1000);
+    }
+
+    var getDegree = function(c, m){
+        return c/m*360;
+    }
+
+    var setClockHTML = function( clock, clockArray ){
+
+        var secondsDegree   = getDegree(clockArray[2], 60);
+        var minutesDegree   = getDegree(clockArray[1], 60);
+        var hoursDegree     = getDegree(clockArray[0], 12);
+
+        if ( clockArray[0] >= 12 ){
+            clock.find(".apm").html("PM");
+        } else{
+            clock.find(".apm").html("AM");
+        }
+
+        clock.find(".seconds").css({
+            "-webkit-transform": "rotateZ("+secondsDegree+"deg)",
+            "-ms-transform": "rotateZ("+secondsDegree+"deg)",
+            "transform": "rotateZ("+secondsDegree+"deg)"
+        });
+
+        minutesDegree = minutesDegree+clockArray[2]/60*6;
+
+        clock.find(".minutes").css({
+            "-webkit-transform": "rotateZ("+minutesDegree+"deg)",
+            "-ms-transform": "rotateZ("+minutesDegree+"deg)",
+            "transform": "rotateZ("+minutesDegree+"deg)"
+        });
+
+        hoursDegree = hoursDegree+clockArray[1]/60*30;
+
+        clock.find(".hours").css({
+            "-webkit-transform": "rotateZ("+hoursDegree+"deg)",
+            "-ms-transform": "rotateZ("+hoursDegree+"deg)",
+            "transform": "rotateZ("+hoursDegree+"deg)"
+        });
+    }
+
+    var getClock = function( timezone ){
+
+        var d = new Date();
+        if ( timezone != undefined ){
+            var utcTimeOffset = parseFloat(timezone.offset)*60*60*1000;
+
+            var utcTime = d.getTime() + (d.getTimezoneOffset()*60*1000); // perfect utc timestamp
+            d = new Date(utcTime + utcTimeOffset);
+        }
+
+
+        var getHours    = d.getHours();
+        var getMinutes  = d.getMinutes();
+        var getSeconds  = d.getSeconds();
+
+        return [getHours, getMinutes, getSeconds];
+    }
+
+    var getTimezoneArray = function( tz ){
+        if ( tz == undefined ){
+            return tz;
+        }
+        var timezoneArray = undefined;
+        $.each(timezone, function(){
+            if ( this['utc'].toString().indexOf(tz) != -1 ){
+                timezoneArray = this;
+                return true;
+            }
+        });
+        return timezoneArray;
+    }
+
+})(jQuery);
+
+$(".clock").worldClock();
