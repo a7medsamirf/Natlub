@@ -97,8 +97,8 @@ body {
   color: #a085a1 !important;
   font-weight: 400;
   line-height: 1.5;
-  text-align: right;
-  background: #f7f7f7 url(../img/bgr01.png) fixed 0 0 repeat;
+  background: #FAFAFA;
+  /* background: #f7f7f7 url(../img/bgr01.png) fixed 0 0 repeat; */
 }
 
 .Purple-color {
@@ -719,7 +719,8 @@ a.nav-link.login.btn.btn-info {
 
 #header #carouselExampleIndicators {
   position: relative;
-  z-index: 1;
+  /*   z-index: 1;
+ */
   background-size: cover;
   height: 100vh;
   background-color: var(--Purplebackground) !important;
@@ -996,10 +997,16 @@ a.nav-link.login.btn.btn-info {
   position: relative;
   padding: 50px 0;
   background: rgba(255, 255, 255, 0.50);
-  background-image: url(../img/99.jpg);
-
 }
 
+#ordering .blink-img {
+  position: absolute;
+  left: 100px;
+  top: -80px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
 /* ===== Start Shipping ===== */
 
 #Shipping {
@@ -1063,7 +1070,6 @@ a.nav-link.login.btn.btn-info {
   width: 70px;
 }
 
-
 #statistics .progress-value {
   color: #fff;
   position: relative;
@@ -1086,6 +1092,26 @@ a.nav-link.login.btn.btn-info {
 
 #statistics .circle {
   margin-bottom: -25px;
+}
+
+#statistics .progressbar.One .progress-value,
+#statistics .progressbar.One h5 {
+  color: #c11a6f !important;
+}
+
+#statistics .progressbar.two .progress-value,
+#statistics .progressbar.two h5 {
+  color: #00ff00 !important;
+}
+
+#statistics .progressbar.three .progress-value,
+#statistics .progressbar.three h5 {
+  color: #678fff !important;
+}
+
+#statistics .progressbar.Four .progress-value,
+#statistics .progressbar.Four h5 {
+  color: #d82f4e !important;
 }
 
 /* ===== Start our-customers ===== */
@@ -1515,11 +1541,11 @@ form.Forgot-password i {
 }
 
 #stores .card {
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    border: 5px solid #fff;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 5px solid #fff;
 }
 
 #stores .card:before {
@@ -1830,6 +1856,7 @@ form.Forgot-password i {
 --------------------------------------------------*/
 
 #footer {
+  margin: 50px 0 0 0;
   padding-top: 1px;
   position: relative;
   font-weight: normal;
@@ -2004,8 +2031,26 @@ footer.page-footer .footer-copyright {
   #Shipping .card-body h5.striped {
     font-size: 14px;
   }
+
+}
+@media (max-width: 575.98px) { 
+  #our-customers .ordering-title {
+    margin-bottom: 50px;
+  }
+
+  [dir='rtl'] .slick-next {
+    right: auto;
+    left: 16px;
+    top: 0 !important;
+}
+[dir='rtl'] .slick-prev {
+  right: 16px;
+  left: auto;
+  top: 0 !important;
 }
 
+
+ }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #header .carousel-item .mask img {
     max-width: 40%;
@@ -2104,8 +2149,8 @@ footer.page-footer .footer-copyright {
 }
 
 .clock.America {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   background-color: #fff;
   background-image: url(../img/usa.jpg);
   background-position: center;
@@ -2121,8 +2166,8 @@ footer.page-footer .footer-copyright {
 }
 
 .clock.Riyadh {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   background-image: url(../img/ksa.jpg);
   background-position: center;
   background-size: cover;
@@ -2288,6 +2333,7 @@ footer.page-footer .footer-copyright {
   display: block;
   margin-top: 5px;
   color: #fff;
+  font-size: 15px;
 }
 
 /* 1 */
@@ -2517,7 +2563,6 @@ footer.page-footer .footer-copyright {
 
 .demo {
   display: inline-block;
-  margin: 10px;
 }
 
 .demo h4 {
