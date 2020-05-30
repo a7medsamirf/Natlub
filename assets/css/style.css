@@ -2048,7 +2048,10 @@ footer.page-footer .footer-copyright {
   left: auto;
   top: 0 !important;
 }
-
+img.navbar-brand {
+  position: relative;
+  left: auto;
+}
 
  }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2570,4 +2573,9 @@ footer.page-footer .footer-copyright {
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
+}
+
+
+.slick-slide {
+  width: 200px;
 }
