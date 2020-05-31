@@ -23,6 +23,8 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
     <link rel="stylesheet" href="assets/css/mdb.min.css">
     <!-- nprogress CSS -->
     <link rel="stylesheet" href="assets/css/nprogress.css">
+    <!-- datatables CSS -->
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -41,11 +43,11 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
     <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar">
         <div class="container smooth-scroll">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
-            aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <a href="index.html"> <img class="navbar-brand" src="assets/img/logo.png" alt=""></a>
+            <a href="index.html"> <img class="navbar-brand" src="assets/img/logo.png" alt=""></a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav ml-auto">
@@ -106,37 +108,150 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
 
     <section id="Commission">
         <div class="container">
-            <div class="row">
+                <div class="row">
 
+                    <!-- Grid column -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <h4 class="text-center mb-5">أسعار الصرف.</h4>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item d-flex justify-content-between align-items-center font-weight-bold">
+                               أسم المُعملة
+                              <span class="font-weight-bold">سعر الصرف</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                الدولار الامريكي
+                              <span class="">3.75</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                الجنيه الاسترليني
+                              <span class="">3.75</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                اليورو
+                              <span class="">3.75</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                الدولار الكندي
+                              <span class="">3.75</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                الدولار الاسترالي
+                              <span class="">3.75</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                الين الياباني
+                              <span class="">3.75</span>
+                            </li>
+                          </ul>
+
+
+                    </div>
+                    <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-lg-8 col-md-12 mb-4">
+                            <h4 class="text-center mb-5">أسعار الشحن.</h4>
+                            <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                  <tr>
+                                    <th class="th-sm">الوزن
+                                    </th>
+                                    <th class="th-sm">فيدكس 
+                                    </th>
+                                    <th class="th-sm">دي اتش ال
+                                    </th>
+                                    <th class="th-sm">UPS
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1 باوند</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2 باوند</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3 باوند</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4 باوند</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5 باوند</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>6 باوند</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                    <td>28.99USD</td>
+                                  </tr>
+                                </tbody>
+  
+                              </table>
+
+
+                        </div>
+                        <!-- Grid column -->
+                </div>
+
+            <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
                     <div class="card card-list">
                         <!-- Card Header - Dropdown -->
                         <div class="card-header white d-flex justify-content-between align-items-center py-3">
-                            <p class="h5-responsive font-weight-bold mb-0"><i class="fas fa-dollar-sign pl-2"></i> سعر الصرف</p>
+                            <p class="h5-responsive font-weight-bold mb-0"><i class="fas fa-calculator pl-2"></i> حاسبة
+                                العمولة</p>
 
                         </div>
- 
+
                         <div class="card-body">
                             <div class="d-flex justify-content-around">
-                            <!-- Default input -->
-                            <div class="form-group">
-                                <label for="exampleForm5">سعر الصرف </label>
-                                <input type="number" id="exampleForm5" class="form-control">
+                                <!-- Default input -->
+                                <div class="form-group">
+                                    <label for="exampleForm1">قيمة المشتريات </label>
+                                    <input type="number" id="exampleForm1" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleForm1">العملة </label>
+                                    <select class="browser-default custom-select selectpicker">
+                                        <option value="1">الدولار الامريكي</option>
+                                        <option value="2">الجنيه الاسترليني</option>
+                                        <option value="3">اليورو </option>
+                                        <option value="4">الدولار الكندي</option>
+                                        <option value="5"> الدولار الاسترالي</option>
+                                        <option value="6"> الين الياباني</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleForm1">العملة </label>
-                                <select class="browser-default custom-select selectpicker" >
-                                    <option value="1">الدولار الامريكي</option>
-                                    <option value="2">الجنيه الاسترليني</option>
-                                    <option value="3">اليورو </option>
-                                    <option value="4">الدولار الكندي</option>
-                                    <option value="5"> الدولار الاسترالي</option>
-                                    <option value="6"> الين الياباني</option>
-                                  </select>
-                            </div>
-                        </div>
-                     
 
+                            <div class="form-group">
+                                <div class="d-flex justify-content-around">
+                                    <!-- Material unchecked -->
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                                        <label class="form-check-label" for="materialUnchecked"> أريد تجميع مشترياتي
+                                            ..</label>
+                                    </div>
+                                    <button class="btn btn-info btn-md" type="submit">أحسب التكلفة</button>
+
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -156,126 +271,29 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
                             <div class="d-flex">
                                 <div class="form-group">
                                     <label for="exampleForm1">شركة الشحن </label>
-                                    <select class="browser-default custom-select selectpicker" >
+                                    <select class="browser-default custom-select selectpicker">
                                         <option value="2">فيدكس </option>
                                         <option value="1">الوزن </option>
                                         <option value="3">دي اتش ال</option>
                                         <option value="4">UPS</option>
-                                      </select>
+                                    </select>
                                 </div>
-                            <div class="form-group ml-3">
-                                <label for="exampleForm2">ما هو الوزن بالباوند (رطل)؟</label>
-                                <select class="browser-default custom-select selectpicker" >
-                                    <option value="1">1 باوند</option>
-                                    <option value="2">2 باوند</option>
-                                    <option value="3">3 باوند</option>
-                                    <option value="4">4 باوند</option>
-                                    <option value="5">5 باوند</option>
-                                    <option value="6">6 باوند</option>
-                                </select>
-                            </div>
+                                <div class="form-group ml-3">
+                                    <label for="exampleForm2">ما هو الوزن بالباوند (رطل)؟</label>
+                                    <select class="browser-default custom-select selectpicker">
+                                        <option value="1">1 باوند</option>
+                                        <option value="2">2 باوند</option>
+                                        <option value="3">3 باوند</option>
+                                        <option value="4">4 باوند</option>
+                                        <option value="5">5 باوند</option>
+                                        <option value="6">6 باوند</option>
+                                    </select>
+                                </div>
 
-                        </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-                    <div class="card card-list">
-                        <!-- Card Header - Dropdown -->
-                        <div class="card-header white d-flex justify-content-between align-items-center py-3">
-                            <p class="h5-responsive font-weight-bold mb-0"><i class="fas fa-calculator pl-2"></i> حاسبة
-                                العمولة</p>
-
-                        </div>
- 
-                        <div class="card-body">
-                            <div class="d-flex justify-content-around">
-                            <!-- Default input -->
-                            <div class="form-group">
-                                <label for="exampleForm1">قيمة المشتريات </label>
-                                <input type="number" id="exampleForm1" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="exampleForm1">العملة </label>
-                                <select class="browser-default custom-select selectpicker" >
-                                    <option value="1">الدولار الامريكي</option>
-                                    <option value="2">الجنيه الاسترليني</option>
-                                    <option value="3">اليورو </option>
-                                    <option value="4">الدولار الكندي</option>
-                                    <option value="5"> الدولار الاسترالي</option>
-                                    <option value="6"> الين الياباني</option>
-                                  </select>
+                                <button class="btn btn-info btn-md" type="submit">أحسب سعر الشحن</button>
                             </div>
-                        </div>
-                     
-                            <div class="form-group">
-                                <div class="d-flex justify-content-around">
-                                    <!-- Material unchecked -->
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                                        <label class="form-check-label" for="materialUnchecked"> أريد تجميع مشترياتي
-                                       ..</label>
-                                    </div>
-                                    <button class="btn btn-info btn-md" type="submit">أحسب التكلفة</button>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-                    <div class="card card-list">
-                        <!-- Card Header - Dropdown -->
-                        <div class="card-header white d-flex justify-content-between align-items-center py-3">
-                            <p class="h5-responsive font-weight-bold mb-0"><i class="fas fa-dollar-sign pl-2"></i> أسعار
-                                الشحن</p>
-
-                        </div>
-
-                        <div class="card-body">
-                            <!-- Default input -->
-                            <div class="d-flex">
-                                <div class="form-group">
-                                    <label for="exampleForm1">شركة الشحن </label>
-                                    <select class="browser-default custom-select selectpicker" >
-                                        <option value="2">فيدكس </option>
-                                        <option value="1">الوزن </option>
-                                        <option value="3">دي اتش ال</option>
-                                        <option value="4">UPS</option>
-                                      </select>
-                                </div>
-                            <div class="form-group ml-3">
-                                <label for="exampleForm2">ما هو الوزن بالباوند (رطل)؟</label>
-                                <select class="browser-default custom-select selectpicker" >
-                                    <option value="1">1 باوند</option>
-                                    <option value="2">2 باوند</option>
-                                    <option value="3">3 باوند</option>
-                                    <option value="4">4 باوند</option>
-                                    <option value="5">5 باوند</option>
-                                    <option value="6">6 باوند</option>
-                                </select>
-                            </div>
-
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-info btn-md" type="submit">أحسب سعر الشحن</button>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -310,17 +328,18 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
 
                         </div>
 
-                     
+
                         <div class="card-body">
                             <div class="d-flex justify-content-around">
                                 <input type="number" id="exampleForm5" class="form-control"
                                     placeholder="الوزن بالباوند">
                                 <button class="btn btn-info btn-md mr-2 ml-2" type="submit"><i
                                         class="fas fa-exchange-alt fa-lg pr-2"></i></button>
-                                <input type="number" id="exampleForm6" class="form-control" placeholder="الوزن بالكيلو جرام">
+                                <input type="number" id="exampleForm6" class="form-control"
+                                    placeholder="الوزن بالكيلو جرام">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -410,61 +429,61 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
                         </div>
                         <!-- Grid row -->
                     </div>
-                                    <div class="demo mt-3">
-                                        <div class="clock America" data-timezone="America/New_York">
-                                            <div class="needle">
-                                                <span class="minutes"></span>
-                                                <span class="hours"></span>
-                                                <span class="seconds"></span>
-                                            </div>
-                            
-                                            <ul class="time-number">
-                                                <li><span>1</span></li>
-                                                <li><span>2</span></li>
-                                                <li><span>3</span></li>
-                                                <li><span>4</span></li>
-                                                <li><span>5</span></li>
-                                                <li><span>6</span></li>
-                                                <li><span>7</span></li>
-                                                <li><span>8</span></li>
-                                                <li><span>9</span></li>
-                                                <li><span>10</span></li>
-                                                <li><span>11</span></li>
-                                                <li><span>12</span></li>
-                                            </ul>
-                            
-                                            <div class="apm"></div>
-                                    </div>
-                                    </div>
-                
-                                    <div class="demo mt-3">
-                                        <div class="clock Riyadh" data-timezone="Asia/Riyadh">
-                                            <div class="needle">
-                                                <span class="minutes"></span>
-                                                <span class="hours"></span>
-                                                <span class="seconds"></span>
-                                            </div>
-                            
-                                            <ul class="time-number">
-                                                <li><span>1</span></li>
-                                                <li><span>2</span></li>
-                                                <li><span>3</span></li>
-                                                <li><span>4</span></li>
-                                                <li><span>5</span></li>
-                                                <li><span>6</span></li>
-                                                <li><span>7</span></li>
-                                                <li><span>8</span></li>
-                                                <li><span>9</span></li>
-                                                <li><span>10</span></li>
-                                                <li><span>11</span></li>
-                                                <li><span>12</span></li>
-                                            </ul>
-                            
-                                            <div class="apm"></div>
-                                        </div>
-                                    </div>
+                    <div class="demo mt-3">
+                        <div class="clock America" data-timezone="America/New_York">
+                            <div class="needle">
+                                <span class="minutes"></span>
+                                <span class="hours"></span>
+                                <span class="seconds"></span>
+                            </div>
+
+                            <ul class="time-number">
+                                <li><span>1</span></li>
+                                <li><span>2</span></li>
+                                <li><span>3</span></li>
+                                <li><span>4</span></li>
+                                <li><span>5</span></li>
+                                <li><span>6</span></li>
+                                <li><span>7</span></li>
+                                <li><span>8</span></li>
+                                <li><span>9</span></li>
+                                <li><span>10</span></li>
+                                <li><span>11</span></li>
+                                <li><span>12</span></li>
+                            </ul>
+
+                            <div class="apm"></div>
+                        </div>
+                    </div>
+
+                    <div class="demo mt-3">
+                        <div class="clock Riyadh" data-timezone="Asia/Riyadh">
+                            <div class="needle">
+                                <span class="minutes"></span>
+                                <span class="hours"></span>
+                                <span class="seconds"></span>
+                            </div>
+
+                            <ul class="time-number">
+                                <li><span>1</span></li>
+                                <li><span>2</span></li>
+                                <li><span>3</span></li>
+                                <li><span>4</span></li>
+                                <li><span>5</span></li>
+                                <li><span>6</span></li>
+                                <li><span>7</span></li>
+                                <li><span>8</span></li>
+                                <li><span>9</span></li>
+                                <li><span>10</span></li>
+                                <li><span>11</span></li>
+                                <li><span>12</span></li>
+                            </ul>
+
+                            <div class="apm"></div>
+                        </div>
+                    </div>
                 </div>
-            
+
                 <!-- Third column -->
 
             </div>
@@ -511,7 +530,7 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
         NProgress.start(); // start    
         NProgress.set(0.1); // To set a progress percentage, call .set(n), where n is a number between 0..1
         NProgress
-        .inc(); // To increment the progress bar, just use .inc(). This increments it with a random amount. This will never get to 100%: use it for every image load (or similar).If you want to increment by a specific value, you can pass that as a parameter
+            .inc(); // To increment the progress bar, just use .inc(). This increments it with a random amount. This will never get to 100%: use it for every image load (or similar).If you want to increment by a specific value, you can pass that as a parameter
         NProgress.configure({
             ease: 'ease',
             speed: 2000
@@ -528,169 +547,168 @@ License URL: https://github.com/a7medsamirf/Natlub/blob/master/LICENSE
         NProgress.done(); // end
     </script>
     <script>
-        var timezone = [
-  {
-    "value": "Dateline Standard Time",
-    "abbr": "DST",
-    "offset": -12,
-    "isdst": false,
-    "text": "(UTC-12:00) International Date Line West",
-    "utc": [
-      "Etc/GMT+12"
-    ]
-  },
-  {
-    "value": "UTC-11",
-    "abbr": "U",
-    "offset": -11,
-    "isdst": false,
-    "text": "(UTC-11:00) Coordinated Universal Time-11",
-    "utc": [
-      "Etc/GMT+11",
-      "Pacific/Midway",
-      "Pacific/Niue",
-      "Pacific/Pago_Pago"
-    ]
-  },
-  {
-    "value": "Eastern Standard Time",
-    "abbr": "EDT",
-    "offset": -4,
-    "isdst": true,
-    "text": "(UTC-05:00) Eastern Time (US & Canada)",
-    "utc": [
-      "America/Detroit",
-      "America/Havana",
-      "America/Indiana/Petersburg",
-      "America/Indiana/Vincennes",
-      "America/Indiana/Winamac",
-      "America/Iqaluit",
-      "America/Kentucky/Monticello",
-      "America/Louisville",
-      "America/Montreal",
-      "America/Nassau",
-      "America/New_York",
-      "America/Nipigon",
-      "America/Pangnirtung",
-      "America/Port-au-Prince",
-      "America/Thunder_Bay",
-      "America/Toronto",
-      "EST5EDT"
-    ]
-  },
+        var timezone = [{
+                "value": "Dateline Standard Time",
+                "abbr": "DST",
+                "offset": -12,
+                "isdst": false,
+                "text": "(UTC-12:00) International Date Line West",
+                "utc": [
+                    "Etc/GMT+12"
+                ]
+            },
+            {
+                "value": "UTC-11",
+                "abbr": "U",
+                "offset": -11,
+                "isdst": false,
+                "text": "(UTC-11:00) Coordinated Universal Time-11",
+                "utc": [
+                    "Etc/GMT+11",
+                    "Pacific/Midway",
+                    "Pacific/Niue",
+                    "Pacific/Pago_Pago"
+                ]
+            },
+            {
+                "value": "Eastern Standard Time",
+                "abbr": "EDT",
+                "offset": -4,
+                "isdst": true,
+                "text": "(UTC-05:00) Eastern Time (US & Canada)",
+                "utc": [
+                    "America/Detroit",
+                    "America/Havana",
+                    "America/Indiana/Petersburg",
+                    "America/Indiana/Vincennes",
+                    "America/Indiana/Winamac",
+                    "America/Iqaluit",
+                    "America/Kentucky/Monticello",
+                    "America/Louisville",
+                    "America/Montreal",
+                    "America/Nassau",
+                    "America/New_York",
+                    "America/Nipigon",
+                    "America/Pangnirtung",
+                    "America/Port-au-Prince",
+                    "America/Thunder_Bay",
+                    "America/Toronto",
+                    "EST5EDT"
+                ]
+            },
 
-  {
-    "value": "Arab Standard Time",
-    "abbr": "AST",
-    "offset": 3,
-    "isdst": false,
-    "text": "(UTC+03:00) Kuwait, Riyadh",
-    "utc": [
-      "Asia/Aden",
-      "Asia/Bahrain",
-      "Asia/Kuwait",
-      "Asia/Qatar",
-      "Asia/Riyadh"
-    ]
-  },
-];
-
-
-// plugin start from here
-(function($){
-
-    $.fn.worldClock = function(){
-        clockInit(this);
-    }
-
-    var clockInit = function(obj){
-        obj.each(function(){
-            var t = getTimezoneArray( $(this).attr("data-timezone") );
-            runClock( $(this), t );
-        });
-    }
-
-    var runClock = function( el, timezone ){
-        setInterval(function(){
-            var clockArray = getClock(timezone);
-            setClockHTML( el, clockArray );
-        }, 1000);
-    }
-
-    var getDegree = function(c, m){
-        return c/m*360;
-    }
-
-    var setClockHTML = function( clock, clockArray ){
-
-        var secondsDegree   = getDegree(clockArray[2], 60);
-        var minutesDegree   = getDegree(clockArray[1], 60);
-        var hoursDegree     = getDegree(clockArray[0], 12);
-
-        if ( clockArray[0] >= 12 ){
-            clock.find(".apm").html("PM");
-        } else{
-            clock.find(".apm").html("AM");
-        }
-
-        clock.find(".seconds").css({
-            "-webkit-transform": "rotateZ("+secondsDegree+"deg)",
-            "-ms-transform": "rotateZ("+secondsDegree+"deg)",
-            "transform": "rotateZ("+secondsDegree+"deg)"
-        });
-
-        minutesDegree = minutesDegree+clockArray[2]/60*6;
-
-        clock.find(".minutes").css({
-            "-webkit-transform": "rotateZ("+minutesDegree+"deg)",
-            "-ms-transform": "rotateZ("+minutesDegree+"deg)",
-            "transform": "rotateZ("+minutesDegree+"deg)"
-        });
-
-        hoursDegree = hoursDegree+clockArray[1]/60*30;
-
-        clock.find(".hours").css({
-            "-webkit-transform": "rotateZ("+hoursDegree+"deg)",
-            "-ms-transform": "rotateZ("+hoursDegree+"deg)",
-            "transform": "rotateZ("+hoursDegree+"deg)"
-        });
-    }
-
-    var getClock = function( timezone ){
-
-        var d = new Date();
-        if ( timezone != undefined ){
-            var utcTimeOffset = parseFloat(timezone.offset)*60*60*1000;
-
-            var utcTime = d.getTime() + (d.getTimezoneOffset()*60*1000); // perfect utc timestamp
-            d = new Date(utcTime + utcTimeOffset);
-        }
+            {
+                "value": "Arab Standard Time",
+                "abbr": "AST",
+                "offset": 3,
+                "isdst": false,
+                "text": "(UTC+03:00) Kuwait, Riyadh",
+                "utc": [
+                    "Asia/Aden",
+                    "Asia/Bahrain",
+                    "Asia/Kuwait",
+                    "Asia/Qatar",
+                    "Asia/Riyadh"
+                ]
+            },
+        ];
 
 
-        var getHours    = d.getHours();
-        var getMinutes  = d.getMinutes();
-        var getSeconds  = d.getSeconds();
+        // plugin start from here
+        (function ($) {
 
-        return [getHours, getMinutes, getSeconds];
-    }
-
-    var getTimezoneArray = function( tz ){
-        if ( tz == undefined ){
-            return tz;
-        }
-        var timezoneArray = undefined;
-        $.each(timezone, function(){
-            if ( this['utc'].toString().indexOf(tz) != -1 ){
-                timezoneArray = this;
-                return true;
+            $.fn.worldClock = function () {
+                clockInit(this);
             }
-        });
-        return timezoneArray;
-    }
 
-})(jQuery);
+            var clockInit = function (obj) {
+                obj.each(function () {
+                    var t = getTimezoneArray($(this).attr("data-timezone"));
+                    runClock($(this), t);
+                });
+            }
 
-$(".clock").worldClock();
+            var runClock = function (el, timezone) {
+                setInterval(function () {
+                    var clockArray = getClock(timezone);
+                    setClockHTML(el, clockArray);
+                }, 1000);
+            }
+
+            var getDegree = function (c, m) {
+                return c / m * 360;
+            }
+
+            var setClockHTML = function (clock, clockArray) {
+
+                var secondsDegree = getDegree(clockArray[2], 60);
+                var minutesDegree = getDegree(clockArray[1], 60);
+                var hoursDegree = getDegree(clockArray[0], 12);
+
+                if (clockArray[0] >= 12) {
+                    clock.find(".apm").html("PM");
+                } else {
+                    clock.find(".apm").html("AM");
+                }
+
+                clock.find(".seconds").css({
+                    "-webkit-transform": "rotateZ(" + secondsDegree + "deg)",
+                    "-ms-transform": "rotateZ(" + secondsDegree + "deg)",
+                    "transform": "rotateZ(" + secondsDegree + "deg)"
+                });
+
+                minutesDegree = minutesDegree + clockArray[2] / 60 * 6;
+
+                clock.find(".minutes").css({
+                    "-webkit-transform": "rotateZ(" + minutesDegree + "deg)",
+                    "-ms-transform": "rotateZ(" + minutesDegree + "deg)",
+                    "transform": "rotateZ(" + minutesDegree + "deg)"
+                });
+
+                hoursDegree = hoursDegree + clockArray[1] / 60 * 30;
+
+                clock.find(".hours").css({
+                    "-webkit-transform": "rotateZ(" + hoursDegree + "deg)",
+                    "-ms-transform": "rotateZ(" + hoursDegree + "deg)",
+                    "transform": "rotateZ(" + hoursDegree + "deg)"
+                });
+            }
+
+            var getClock = function (timezone) {
+
+                var d = new Date();
+                if (timezone != undefined) {
+                    var utcTimeOffset = parseFloat(timezone.offset) * 60 * 60 * 1000;
+
+                    var utcTime = d.getTime() + (d.getTimezoneOffset() * 60 * 1000); // perfect utc timestamp
+                    d = new Date(utcTime + utcTimeOffset);
+                }
+
+
+                var getHours = d.getHours();
+                var getMinutes = d.getMinutes();
+                var getSeconds = d.getSeconds();
+
+                return [getHours, getMinutes, getSeconds];
+            }
+
+            var getTimezoneArray = function (tz) {
+                if (tz == undefined) {
+                    return tz;
+                }
+                var timezoneArray = undefined;
+                $.each(timezone, function () {
+                    if (this['utc'].toString().indexOf(tz) != -1) {
+                        timezoneArray = this;
+                        return true;
+                    }
+                });
+                return timezoneArray;
+            }
+
+        })(jQuery);
+
+        $(".clock").worldClock();
     </script>
 </body>
 

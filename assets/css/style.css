@@ -1007,6 +1007,7 @@ a.nav-link.login.btn.btn-info {
   z-index: -1;
   opacity: 0.5;
 }
+
 /* ===== Start Shipping ===== */
 
 #Shipping {
@@ -1738,6 +1739,13 @@ form.Forgot-password i {
   color: var(--Purplecolor) !important;
 }
 
+#Commission .list-group-item {
+  background-color: #fff2da !important;
+  border: none !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgb(255, 242, 218);
+}
 /*--------------------------------------------------
   [* Start Time Page ]
 --------------------------------------------------*/
@@ -2009,7 +2017,10 @@ footer.page-footer .footer-copyright {
     position: relative;
     left: 100%;
   }
-
+.navbar-brand
+{
+    
+}
   #ordering .ordering-img {
     display: none;
   }
@@ -2033,7 +2044,8 @@ footer.page-footer .footer-copyright {
   }
 
 }
-@media (max-width: 575.98px) { 
+
+@media (max-width: 575.98px) {
   #our-customers .ordering-title {
     margin-bottom: 50px;
   }
@@ -2042,18 +2054,21 @@ footer.page-footer .footer-copyright {
     right: auto;
     left: 16px;
     top: 0 !important;
-}
-[dir='rtl'] .slick-prev {
-  right: 16px;
-  left: auto;
-  top: 0 !important;
-}
-img.navbar-brand {
-  position: relative;
-  left: auto;
+  }
+
+  [dir='rtl'] .slick-prev {
+    right: 16px;
+    left: auto;
+    top: 0 !important;
+  }
+
+  img.navbar-brand {
+    position: relative;
+    left: auto;
+  }
+
 }
 
- }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #header .carousel-item .mask img {
     max-width: 40%;
