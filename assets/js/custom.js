@@ -222,7 +222,7 @@ $('#multi13').mdbRange({
 $('.customers').slick({
   dots: false,
   arrows: true,
-  autoplay: true,
+  autoplay: false,
   infinite: true,
   rtl: true,
   speed: 600,
@@ -236,9 +236,9 @@ $('.customers').slick({
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 576,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
       }
     },
@@ -255,7 +255,6 @@ $('.customers').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
       }
     },
 
