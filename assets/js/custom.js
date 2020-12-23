@@ -29,7 +29,8 @@ $(document).ready(function () {
       Start niceScroll
 ===================================== */
 
- $(document).ready(function () {
+
+/*  $(document).ready(function () {
   $("body").niceScroll({
     scrollspeed: "110",
     cursorcolor: "#e2a841",
@@ -40,6 +41,7 @@ $(document).ready(function () {
     cursorfixedheight: 250
   });
 });
+  */
  
 /* ==================================
       Loading btn
